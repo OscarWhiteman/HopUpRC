@@ -79,5 +79,35 @@
     "driveType": "4WD",
     "category": "Off-Road Buggy",
     "scale": "1/10"
+  },
+  {
+    "id": "boomerang",
+    "name": "Boomerang",
+    "itemNumbers": ["58055", "58418"],
+    "releaseYear": 1986,
+    "rereleaseYear": 2008,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
+    "id": "fox",
+    "name": "Fox",
+    "itemNumbers": ["58051", "58577"],
+    "releaseYear": 1985,
+    "rereleaseYear": 2016,
+    "driveType": "2WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
+    "id": "sand-scorcher",
+    "name": "Sand Scorcher",
+    "itemNumbers": ["58016", "58452"],
+    "releaseYear": 1979,
+    "rereleaseYear": 2010,
+    "driveType": "2WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
   }
 ]

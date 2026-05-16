@@ -8,6 +8,9 @@ import monsterBeetleData from './data/monster-beetle.json'
 import blackfootData from './data/blackfoot.json'
 import frogData from './data/frog.json'
 import wildOneData from './data/wild-one.json'
+import boomerangData from './data/boomerang.json'
+import foxData from './data/fox.json'
+import sandScorcherData from './data/sand-scorcher.json'
 import ModelSelector from './components/ModelSelector'
 import PartsList from './components/PartsList'
 import HopUpList from './components/HopUpList'
@@ -23,6 +26,9 @@ const ALL_MODEL_DATA = {
   blackfoot: blackfootData,
   frog: frogData,
   'wild-one': wildOneData,
+  boomerang: boomerangData,
+  fox: foxData,
+  'sand-scorcher': sandScorcherData,
 }
 
 const SEARCH_INDEX = Object.entries(ALL_MODEL_DATA).flatMap(([modelId, data]) => [
