@@ -109,5 +109,15 @@
     "driveType": "2WD",
     "category": "Off-Road Buggy",
     "scale": "1/10"
+  },
+  {
+    "id": "rough-rider",
+    "name": "Rough Rider",
+    "itemNumbers": ["58015", "58441"],
+    "releaseYear": 1979,
+    "rereleaseYear": 2009,
+    "driveType": "2WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
   }
 ]

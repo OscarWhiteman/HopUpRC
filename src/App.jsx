@@ -11,6 +11,7 @@ import wildOneData from './data/wild-one.json'
 import boomerangData from './data/boomerang.json'
 import foxData from './data/fox.json'
 import sandScorcherData from './data/sand-scorcher.json'
+import roughRiderData from './data/rough-rider.json'
 import ModelSelector from './components/ModelSelector'
 import PartsList from './components/PartsList'
 import HopUpList from './components/HopUpList'
@@ -29,6 +30,7 @@ const ALL_MODEL_DATA = {
   boomerang: boomerangData,
   fox: foxData,
   'sand-scorcher': sandScorcherData,
+  'rough-rider': roughRiderData,
 }
 
 const SEARCH_INDEX = Object.entries(ALL_MODEL_DATA).flatMap(([modelId, data]) => [
