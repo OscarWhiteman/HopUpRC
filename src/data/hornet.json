@@ -1,0 +1,653 @@
+{
+  "id": "hornet",
+  "name": "Hornet",
+  "itemNumbers": ["58045", "58336"],
+  "releaseYear": 1984,
+  "rereleaseYear": 2003,
+  "driveType": "2WD",
+  "category": "Off-Road Buggy",
+  "scale": "1/10",
+  "chassis": "PP-01",
+  "motor": "Mabuchi RS-540SH",
+  "description": "A timeless 1/10 scale 2WD electric off-road buggy first released in 1984. Known for its simple, robust PP-01 chassis design, the Hornet remains one of Tamiya's most popular and accessible kits, with a thriving aftermarket hop-up scene.",
+  "stockParts": [
+    {
+      "partNumber": "9805020",
+      "name": "Body & Wing",
+      "description": "Polycarbonate body shell with rear wing",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Body"
+    },
+    {
+      "partNumber": "0335050",
+      "name": "Chassis",
+      "description": "Main chassis plate",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Chassis"
+    },
+    {
+      "partNumber": "0005164",
+      "name": "A Parts",
+      "description": "A1, A4–A13",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Plastic Sprues"
+    },
+    {
+      "partNumber": "0005276",
+      "name": "B Parts",
+      "description": "B1–B5",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Plastic Sprues"
+    },
+    {
+      "partNumber": "0005127",
+      "name": "C Parts",
+      "description": "C1–C3",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Plastic Sprues"
+    },
+    {
+      "partNumber": "9005156",
+      "name": "D Parts",
+      "description": "D1–D13",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Plastic Sprues"
+    },
+    {
+      "partNumber": "0555066",
+      "name": "F Parts",
+      "description": "F1–F3",
+      "bagCode": null,
+      "qty": 2,
+      "category": "Plastic Sprues"
+    },
+    {
+      "partNumber": "0115065",
+      "name": "P Parts",
+      "description": "P1–P7",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Plastic Sprues"
+    },
+    {
+      "partNumber": "0555067",
+      "name": "R Parts",
+      "description": "R1–R3",
+      "bagCode": null,
+      "qty": 2,
+      "category": "Plastic Sprues"
+    },
+    {
+      "partNumber": "0225001",
+      "name": "Z Parts",
+      "description": "Z1–Z8",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Plastic Sprues"
+    },
+    {
+      "partNumber": "0445007",
+      "name": "Bumper",
+      "description": "Front bumper assembly",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Chassis"
+    },
+    {
+      "partNumber": "9805033",
+      "name": "Front Tires",
+      "description": "Front tires",
+      "bagCode": null,
+      "qty": 2,
+      "category": "Wheels & Tires"
+    },
+    {
+      "partNumber": "9805034",
+      "name": "Rear Tires",
+      "description": "Rear tires",
+      "bagCode": null,
+      "qty": 2,
+      "category": "Wheels & Tires"
+    },
+    {
+      "partNumber": "9115010",
+      "name": "Differential Gear Bag",
+      "description": "Small Bevel Gear (MG1) x3, Large Bevel Gear (MG2) x2, Differential Spur Gear (MG3) x1",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Drivetrain"
+    },
+    {
+      "partNumber": "9465639",
+      "name": "Screw Bag A",
+      "description": "Hardware bag A (see BA-coded parts for individual items)",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Hardware Bags"
+    },
+    {
+      "partNumber": "9465652",
+      "name": "Screw Bag B",
+      "description": "Hardware bag B (see BB-coded parts for individual items)",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Hardware Bags"
+    },
+    {
+      "partNumber": "9465116",
+      "name": "Screw Bag C",
+      "description": "Hardware bag C (see BC-coded parts for individual items)",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Hardware Bags"
+    },
+    {
+      "partNumber": "9465107",
+      "name": "Screw Bag D",
+      "description": "Hardware bag D (see BD-coded parts for individual items)",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Hardware Bags"
+    },
+    {
+      "partNumber": "9400273",
+      "name": "Damper Parts Bag",
+      "description": "Complete damper parts bag (see MD-coded parts for individual items)",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Hardware Bags"
+    },
+    {
+      "partNumber": "9400193",
+      "name": "Rod Bag",
+      "description": "Rod bag (see MR-coded parts for individual items)",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Hardware Bags"
+    },
+    {
+      "partNumber": "9805729",
+      "name": "3x21mm Tapping Screw",
+      "description": "3x21mm tapping screw",
+      "bagCode": "BA2",
+      "qty": 5,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "9805754",
+      "name": "3x8mm Tapping Screw",
+      "description": "3x8mm tapping screw",
+      "bagCode": "BA3",
+      "qty": 10,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "9805868",
+      "name": "2x10mm Screw",
+      "description": "2x10mm screw",
+      "bagCode": "BA4",
+      "qty": 10,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "9805556",
+      "name": "2x8mm Screw",
+      "description": "2x8mm screw",
+      "bagCode": "BA5",
+      "qty": 10,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "50586",
+      "name": "3mm Washer",
+      "description": "3mm washer",
+      "bagCode": "BA6",
+      "qty": 15,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "9805629",
+      "name": "3x12mm Tapping Screw",
+      "description": "3x12mm tapping screw",
+      "bagCode": "BB1",
+      "qty": 4,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "9805755",
+      "name": "3x22mm Screw Pin",
+      "description": "3x22mm screw pin",
+      "bagCode": "BB2",
+      "qty": 4,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "3550008",
+      "name": "5x30mm Shaft",
+      "description": "5x30mm shaft",
+      "bagCode": "BB3",
+      "qty": 1,
+      "category": "Drivetrain"
+    },
+    {
+      "partNumber": "9805859",
+      "name": "3x15mm Screw",
+      "description": "3x15mm screw",
+      "bagCode": "BC2",
+      "qty": 4,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "50575",
+      "name": "2.6x10mm Tapping Screw",
+      "description": "2.6x10mm tapping screw",
+      "bagCode": "BC3",
+      "qty": 5,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "9805715",
+      "name": "4mm Lock Nut",
+      "description": "4mm lock nut",
+      "bagCode": "BC5",
+      "qty": 4,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "9805758",
+      "name": "2mm Washer",
+      "description": "2mm washer",
+      "bagCode": "BC6",
+      "qty": 5,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "50576",
+      "name": "3mm Grub Screw",
+      "description": "3mm grub screw",
+      "bagCode": "BC7",
+      "qty": 10,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "50038",
+      "name": "Tool Set",
+      "description": "Box wrench, hex wrench, and 4x BC7 grub screws",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Tools"
+    },
+    {
+      "partNumber": "50594",
+      "name": "2x10mm Shaft",
+      "description": "2x10mm shaft",
+      "bagCode": "BD5",
+      "qty": 10,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "50590",
+      "name": "4mm Ball Connector",
+      "description": "4mm ball connector",
+      "bagCode": "BD6",
+      "qty": 5,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "9805185",
+      "name": "850 Metal Bearing",
+      "description": "850-size metal ball bearing",
+      "bagCode": "BM1",
+      "qty": 2,
+      "category": "Bearings"
+    },
+    {
+      "partNumber": "0555015",
+      "name": "1150 Plastic Bearing",
+      "description": "1150-size plastic bushing/bearing",
+      "bagCode": "BM2",
+      "qty": 10,
+      "category": "Bearings"
+    },
+    {
+      "partNumber": "9805967",
+      "name": "Damper Piston",
+      "description": "Damper piston",
+      "bagCode": "MD1",
+      "qty": 2,
+      "category": "Damper"
+    },
+    {
+      "partNumber": "9805965",
+      "name": "Free Piston",
+      "description": "Free piston",
+      "bagCode": "MD2",
+      "qty": 2,
+      "category": "Damper"
+    },
+    {
+      "partNumber": "9805968",
+      "name": "Damper Piston",
+      "description": "Damper piston (alternate)",
+      "bagCode": "MD3",
+      "qty": 2,
+      "category": "Damper"
+    },
+    {
+      "partNumber": "50588",
+      "name": "2mm E-ring",
+      "description": "2mm E-ring",
+      "bagCode": "MD4",
+      "qty": 15,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "9804158",
+      "name": "2x4mm Screw",
+      "description": "2x4mm screw",
+      "bagCode": "MD5",
+      "qty": 10,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "9805240",
+      "name": "3mm O-ring",
+      "description": "3mm O-ring",
+      "bagCode": "MD6",
+      "qty": 7,
+      "category": "Damper"
+    },
+    {
+      "partNumber": "9805082",
+      "name": "Spring Mount",
+      "description": "Damper spring mount",
+      "bagCode": "MD7",
+      "qty": 2,
+      "category": "Damper"
+    },
+    {
+      "partNumber": "9805100",
+      "name": "Damper Mount",
+      "description": "Damper mount",
+      "bagCode": "MD8",
+      "qty": 2,
+      "category": "Damper"
+    },
+    {
+      "partNumber": "9805966",
+      "name": "Piston Shaft",
+      "description": "Damper piston shaft",
+      "bagCode": "MD9",
+      "qty": 2,
+      "category": "Damper"
+    },
+    {
+      "partNumber": "0445128",
+      "name": "RD Front Upright",
+      "description": "Right/left front upright",
+      "bagCode": "MD10",
+      "qty": 1,
+      "category": "Suspension"
+    },
+    {
+      "partNumber": "3515006",
+      "name": "18T Pinion Gear",
+      "description": "18-tooth pinion gear",
+      "bagCode": "MD11",
+      "qty": 1,
+      "category": "Drivetrain"
+    },
+    {
+      "partNumber": "9805304",
+      "name": "Axle Spring",
+      "description": "Axle spring",
+      "bagCode": "MD12",
+      "qty": 2,
+      "category": "Suspension"
+    },
+    {
+      "partNumber": "3555054",
+      "name": "Rear Shaft",
+      "description": "Rear shaft",
+      "bagCode": "MD13",
+      "qty": 2,
+      "category": "Drivetrain",
+      "notes": "Requires 2 sets (2x item 3555054) per car"
+    },
+    {
+      "partNumber": "3555057",
+      "name": "4x95mm Shaft",
+      "description": "4x95mm shaft",
+      "bagCode": "MD14",
+      "qty": 1,
+      "category": "Drivetrain"
+    },
+    {
+      "partNumber": "9805098",
+      "name": "Damper Cylinder",
+      "description": "Damper cylinder body",
+      "bagCode": "MD15",
+      "qty": 2,
+      "category": "Damper"
+    },
+    {
+      "partNumber": "9805099",
+      "name": "Cylinder Cap",
+      "description": "Damper cylinder cap",
+      "bagCode": "MD16",
+      "qty": 2,
+      "category": "Damper"
+    },
+    {
+      "partNumber": "9805097",
+      "name": "Rear Coil Spring",
+      "description": "Rear damper coil spring",
+      "bagCode": "MD17",
+      "qty": 2,
+      "category": "Damper"
+    },
+    {
+      "partNumber": "9805083",
+      "name": "Front Coil Spring",
+      "description": "Front damper coil spring",
+      "bagCode": "MD18",
+      "qty": 2,
+      "category": "Damper"
+    },
+    {
+      "partNumber": "9805897",
+      "name": "3mm Flange Nut",
+      "description": "3mm flange nut",
+      "bagCode": "MD19",
+      "qty": 10,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "50633",
+      "name": "4mm Adjuster",
+      "description": "4mm adjuster",
+      "bagCode": "MR1",
+      "qty": 6,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "50197",
+      "name": "Snap Pin Set",
+      "description": "Snap pin set",
+      "bagCode": "MR4",
+      "qty": 10,
+      "category": "Hardware"
+    },
+    {
+      "partNumber": "0005072",
+      "name": "Counter Gear",
+      "description": "Counter gear",
+      "bagCode": "MR6",
+      "qty": 1,
+      "category": "Drivetrain"
+    },
+    {
+      "partNumber": "50171",
+      "name": "Heat Resistant Double-Sided Tape",
+      "description": "Heat-resistant double-sided adhesive tape",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Tools"
+    },
+    {
+      "partNumber": "50595",
+      "name": "Nylon Band w/Metal Hook",
+      "description": "Nylon cable/body band with metal hook",
+      "bagCode": null,
+      "qty": 10,
+      "category": "Chassis"
+    },
+    {
+      "partNumber": "87025",
+      "name": "Ceramic Grease",
+      "description": "Ceramic grease",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Maintenance"
+    },
+    {
+      "partNumber": "45029",
+      "name": "ESC TEU-101BK",
+      "description": "Electronic speed controller TEU-101BK",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Electronics"
+    },
+    {
+      "partNumber": "7435035",
+      "name": "Motor",
+      "description": "Electric motor",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Electronics"
+    },
+    {
+      "partNumber": "6095003",
+      "name": "Antenna Pipe",
+      "description": "Antenna pipe, 30cm",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Electronics"
+    },
+    {
+      "partNumber": "9495452",
+      "name": "Sticker & Masking Seal",
+      "description": "Decal and masking seal sheet",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Body"
+    },
+    {
+      "partNumber": "1050367",
+      "name": "Instructions",
+      "description": "Assembly instruction manual",
+      "bagCode": null,
+      "qty": 1,
+      "category": "Tools"
+    }
+  ],
+  "hopUps": [
+    {
+      "partNumber": "53008",
+      "name": "1150 Sealed Ball Bearing Set (4 pcs.)",
+      "category": "Bearings",
+      "description": "1150-size sealed ball bearings, set of 4. Replaces stock plastic bushings for reduced friction and improved drivetrain efficiency.",
+      "compatibility": ["Hornet", "Grasshopper", "Lunchbox"]
+    },
+    {
+      "partNumber": "53013",
+      "name": "3x15mm Titanium Round Head Screw (10 pcs.)",
+      "category": "Hardware",
+      "description": "3x15mm titanium round-head screws, pack of 10. Lightweight and corrosion-resistant upgrade over steel screws.",
+      "compatibility": ["Hornet", "Grasshopper", "Lunchbox"]
+    },
+    {
+      "partNumber": "53015",
+      "name": "3x8mm Titanium Tapping Screw (10 pcs.)",
+      "category": "Hardware",
+      "description": "3x8mm titanium tapping screws, pack of 10. Lightweight and corrosion-resistant upgrade over steel screws.",
+      "compatibility": ["Hornet", "Grasshopper", "Lunchbox"]
+    },
+    {
+      "partNumber": "53016",
+      "name": "3x12mm Titanium Tapping Screw (10 pcs.)",
+      "category": "Hardware",
+      "description": "3x12mm titanium tapping screws, pack of 10. Lightweight and corrosion-resistant upgrade over steel screws.",
+      "compatibility": ["Hornet", "Grasshopper", "Lunchbox"]
+    },
+    {
+      "partNumber": "53029",
+      "name": "1150 Sealed Ball Bearing Set (2 pcs.)",
+      "category": "Bearings",
+      "description": "1150-size sealed ball bearings, set of 2. Smaller pack option for partial bearing upgrades.",
+      "compatibility": ["Hornet", "Grasshopper", "Lunchbox"]
+    },
+    {
+      "partNumber": "53030",
+      "name": "850 Sealed Ball Bearing Set (4 pcs.)",
+      "category": "Bearings",
+      "description": "850-size sealed ball bearings, set of 4. Replaces the stock 850 metal bearing (BM1) for smoother axle rotation.",
+      "compatibility": ["Hornet", "Grasshopper", "Lunchbox"]
+    },
+    {
+      "partNumber": "53132",
+      "name": "R/C Fluorescent Color Antenna Pipes (4 pcs.)",
+      "category": "Body",
+      "description": "Fluorescent-colour antenna pipes for R/C cars, set of 4. Improves antenna visibility in mixed colours.",
+      "compatibility": ["Hornet", "Grasshopper", "Lunchbox", "Hotshot"]
+    },
+    {
+      "partNumber": "53347",
+      "name": "3x3mm Spring Set Screw (10 pcs.)",
+      "category": "Hardware",
+      "description": "3x3mm grub/set screws, pack of 10. Useful spare for pinion gear and other set-screw applications.",
+      "compatibility": ["Hornet", "Grasshopper", "Lunchbox", "Hotshot"]
+    },
+    {
+      "partNumber": "53439",
+      "name": "Anti-Wear Grease",
+      "category": "Maintenance",
+      "description": "Tamiya anti-wear grease for gears, differential, and sliding drivetrain components.",
+      "compatibility": ["Hornet", "Grasshopper", "Lunchbox", "Hotshot"]
+    },
+    {
+      "partNumber": "53443",
+      "name": "Silicone Damper Oil — Soft Set",
+      "category": "Maintenance",
+      "description": "Silicone damper oil soft set: #200, #300, #400. For low-resistance tuning on oil-filled dampers.",
+      "compatibility": ["Hornet", "Lunchbox", "Hotshot"]
+    },
+    {
+      "partNumber": "53444",
+      "name": "Silicone Damper Oil — Medium Set",
+      "category": "Maintenance",
+      "description": "Silicone damper oil medium set: #500, #600, #700. For mid-range damping on oil-filled dampers.",
+      "compatibility": ["Hornet", "Lunchbox", "Hotshot"]
+    },
+    {
+      "partNumber": "53445",
+      "name": "Silicone Damper Oil — Hard Set",
+      "category": "Maintenance",
+      "description": "Silicone damper oil hard set: #800, #900, #1000. For high-resistance tuning on oil-filled dampers.",
+      "compatibility": ["Hornet", "Lunchbox", "Hotshot"]
+    },
+    {
+      "partNumber": "53689",
+      "name": "540-J Motor",
+      "category": "Electronics",
+      "description": "High-performance 540-J brushed motor. A direct fit upgrade over the stock RS-540SH motor for increased speed and torque.",
+      "compatibility": ["Hornet", "Lunchbox", "Hotshot"]
+    }
+  ]
+}

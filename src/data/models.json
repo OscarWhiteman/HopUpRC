@@ -1,0 +1,43 @@
+[
+  {
+    "id": "hornet",
+    "name": "Hornet",
+    "itemNumbers": ["58045", "58336"],
+    "releaseYear": 1984,
+    "rereleaseYear": 2003,
+    "driveType": "2WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
+    "id": "lunchbox",
+    "name": "Lunchbox",
+    "itemNumbers": ["58063"],
+    "releaseYear": 1987,
+    "rereleaseYear": null,
+    "driveType": "2WD",
+    "category": "Monster Truck",
+    "scale": "1/10"
+  },
+  {
+    "id": "grasshopper",
+    "name": "Grasshopper",
+    "itemNumbers": ["58043", "58346"],
+    "releaseYear": 1984,
+    "rereleaseYear": 2009,
+    "driveType": "2WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
+    "id": "hotshot",
+    "name": "Hotshot",
+    "itemNumbers": ["58391"],
+    "originalItemNumber": "58047",
+    "releaseYear": 1985,
+    "rereleaseYear": 2012,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  }
+]
