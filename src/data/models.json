@@ -39,5 +39,45 @@
     "driveType": "4WD",
     "category": "Off-Road Buggy",
     "scale": "1/10"
+  },
+  {
+    "id": "monster-beetle",
+    "name": "Monster Beetle",
+    "itemNumbers": ["58060", "58451"],
+    "releaseYear": 1984,
+    "rereleaseYear": 2012,
+    "driveType": "4WD",
+    "category": "Monster Truck",
+    "scale": "1/10"
+  },
+  {
+    "id": "blackfoot",
+    "name": "Blackfoot",
+    "itemNumbers": ["58058"],
+    "releaseYear": 1986,
+    "rereleaseYear": null,
+    "driveType": "4WD",
+    "category": "Monster Truck",
+    "scale": "1/10"
+  },
+  {
+    "id": "frog",
+    "name": "Frog",
+    "itemNumbers": ["58059"],
+    "releaseYear": 1983,
+    "rereleaseYear": null,
+    "driveType": "2WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
+    "id": "wild-one",
+    "name": "Wild One",
+    "itemNumbers": ["58065"],
+    "releaseYear": 1987,
+    "rereleaseYear": null,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
   }
 ]

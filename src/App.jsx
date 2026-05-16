@@ -4,6 +4,10 @@ import hornetData from './data/hornet.json'
 import lunchboxData from './data/lunchbox.json'
 import grasshopperData from './data/grasshopper.json'
 import hotshotData from './data/hotshot.json'
+import monsterBeetleData from './data/monster-beetle.json'
+import blackfootData from './data/blackfoot.json'
+import frogData from './data/frog.json'
+import wildOneData from './data/wild-one.json'
 import ModelSelector from './components/ModelSelector'
 import PartsList from './components/PartsList'
 import HopUpList from './components/HopUpList'
@@ -15,6 +19,10 @@ const ALL_MODEL_DATA = {
   lunchbox: lunchboxData,
   grasshopper: grasshopperData,
   hotshot: hotshotData,
+  'monster-beetle': monsterBeetleData,
+  blackfoot: blackfootData,
+  frog: frogData,
+  'wild-one': wildOneData,
 }
 
 const SEARCH_INDEX = Object.entries(ALL_MODEL_DATA).flatMap(([modelId, data]) => [
@@ -58,7 +66,7 @@ export default function App() {
   }
 
   function toggleHopUpStatus(modelId, partNumber, status) {
-    const key = `${modelId}-${partNumber}`
+    const key = `${modelId}|${partNumber}`
     setHopUpList((prev) => {
       const next = { ...prev }
       if (next[key] === status) {

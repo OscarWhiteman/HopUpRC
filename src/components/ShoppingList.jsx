@@ -11,7 +11,7 @@ export default function ShoppingList({ hopUpList, allModelData, onToggleStatus, 
 
   const grouped = {}
   for (const [key, status] of entries) {
-    const sep = key.indexOf('-')
+    const sep = key.indexOf('|')
     const modelId = key.slice(0, sep)
     const partNumber = key.slice(sep + 1)
     const part = allModelData[modelId]?.hopUps.find((h) => h.partNumber === partNumber)

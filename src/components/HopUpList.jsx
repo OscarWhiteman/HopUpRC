@@ -6,7 +6,7 @@ export default function HopUpList({ hopUps, modelId, hopUpList, onToggleStatus }
   return (
     <div className="hopup-grid">
       {hopUps.map((item) => {
-        const key = `${modelId}-${item.partNumber}`
+        const key = `${modelId}|${item.partNumber}`
         const status = hopUpList[key]
         return (
           <div key={item.partNumber} className="hopup-card">
