@@ -134,30 +134,28 @@ export default function App() {
       </header>
 
       <main className="main-content">
-        <ModelSelector
-          models={models}
-          selectedModelId={selectedModelId}
-          onSelect={handleSelectModel}
-        />
-
         {showShoppingList ? (
-          <ShoppingList
-            hopUpList={hopUpList}
-            allModelData={ALL_MODEL_DATA}
-            onToggleStatus={toggleHopUpStatus}
-            onSelectModel={handleSelectModel}
-          />
-        ) : (
           <>
-            {!selectedModelId && (
-              <GlobalSearch
-                searchIndex={SEARCH_INDEX}
-                onSelectModel={handleSelectModel}
-              />
-            )}
-
-            {modelDetail && (
-              <section className="model-detail">
+            <ModelSelector
+              models={models}
+              selectedModelId={selectedModelId}
+              onSelect={handleSelectModel}
+            />
+            <ShoppingList
+              hopUpList={hopUpList}
+              allModelData={ALL_MODEL_DATA}
+              onToggleStatus={toggleHopUpStatus}
+              onSelectModel={handleSelectModel}
+            />
+          </>
+        ) : selectedModelId ? (
+          <>
+            <ModelSelector
+              models={models}
+              selectedModelId={selectedModelId}
+              onSelect={handleSelectModel}
+            />
+            <section className="model-detail">
                 <div className="model-header">
                   <div>
                     <h2 className="model-name">{modelDetail.name}</h2>
@@ -227,8 +225,20 @@ export default function App() {
                     onToggleStatus={toggleHopUpStatus}
                   />
                 )}
-              </section>
-            )}
+            </section>
+          </>
+        ) : (
+          <>
+            <GlobalSearch
+              searchIndex={SEARCH_INDEX}
+              onSelectModel={handleSelectModel}
+            />
+            <div className="browse-divider"><span>or browse by model</span></div>
+            <ModelSelector
+              models={models}
+              selectedModelId={selectedModelId}
+              onSelect={handleSelectModel}
+            />
           </>
         )}
       </main>

@@ -509,53 +509,142 @@ html, body {
   padding: 1px 6px;
 }
 
-/* ── Global Search ── */
-.global-search { margin-bottom: 2rem; }
+/* ── Search Hero ── */
+.search-hero { margin-bottom: 1rem; }
 
-.global-search-input {
+.search-hero-inner {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.search-hero-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.search-hero-accent { color: var(--accent); }
+
+.search-hero-sub {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-hero-input {
   background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-lg);
   color: var(--text);
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
+  display: block;
+  font-size: 1.05rem;
+  margin: 0 auto;
+  max-width: 580px;
   outline: none;
-  padding: 0.6rem 1rem;
-  transition: border-color 0.15s;
+  padding: 0.75rem 1.1rem;
+  transition: border-color 0.15s, box-shadow 0.15s;
   width: 100%;
 }
 
-.global-search-input::placeholder { color: var(--text-dim); }
-.global-search-input:focus { border-color: var(--accent); }
+.search-hero-input::placeholder { color: var(--text-dim); }
+.search-hero-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(245, 197, 24, 0.1);
+}
 
-.global-results { display: flex; flex-direction: column; gap: 0.35rem; }
+.search-hero-hint {
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  margin-top: 0.6rem;
+}
+
+/* ── Browse Divider ── */
+.browse-divider {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.browse-divider::before,
+.browse-divider::after {
+  background: var(--border);
+  content: '';
+  flex: 1;
+  height: 1px;
+}
+
+.browse-divider span {
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+/* ── Global Results ── */
+.global-results { margin-top: 0.5rem; }
+
+.global-results-count {
+  color: var(--text-dim);
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.global-result-group { margin-bottom: 1.25rem; }
+
+.global-result-group-header {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+}
+
+.global-result-group-name {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.global-result-group-count {
+  background: var(--bg-card);
+  border-radius: 10px;
+  color: var(--text-dim);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 1px 6px;
+}
 
 .global-result {
-  align-items: center;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   cursor: pointer;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  padding: 0.6rem 0.9rem;
+  display: block;
+  margin-bottom: 0.3rem;
+  padding: 0.65rem 0.9rem;
   text-align: left;
   transition: border-color 0.15s, background 0.15s;
   width: 100%;
 }
 
-.global-result:hover { background: var(--bg-card-hover); border-color: var(--border-accent); }
+.global-result:hover,
+.global-result.focused {
+  background: var(--bg-card-hover);
+  border-color: var(--accent);
+}
 
-.global-result-model {
-  color: var(--accent);
-  font-size: 0.75rem;
-  font-weight: 700;
-  min-width: 80px;
+.global-result-top {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 }
 
 .global-result-type {
   border-radius: 3px;
+  flex-shrink: 0;
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -568,11 +657,25 @@ html, body {
 
 .global-result-number {
   color: var(--accent);
+  flex-shrink: 0;
   font-family: 'SF Mono', 'Fira Code', monospace;
   font-size: 0.78rem;
 }
 
-.global-result-name { color: var(--text); font-size: 0.875rem; }
+.global-result-name { color: var(--text); font-size: 0.875rem; font-weight: 500; }
+
+.global-result-desc {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  line-height: 1.4;
+  margin-top: 0.3rem;
+}
+
+.search-highlight {
+  background: none;
+  color: var(--accent);
+  font-weight: 700;
+}
 
 /* ── Sortable Table ── */
 .sortable-th {
