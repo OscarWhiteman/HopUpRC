@@ -201,6 +201,16 @@
     "scale": "1/10"
   },
   {
+    "id": "thunder-dragon",
+    "name": "Thunder Dragon",
+    "itemNumbers": ["58073", "47458"],
+    "releaseYear": 1988,
+    "rereleaseYear": 2021,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
     "id": "vqs",
     "name": "VQS",
     "itemNumbers": ["58076", "58686"],
