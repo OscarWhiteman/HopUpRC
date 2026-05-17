@@ -1,0 +1,288 @@
+{
+  "id": "fire-dragon",
+  "name": "Fire Dragon",
+  "itemNumbers": ["58078", "58403", "47457"],
+  "releaseYear": 1989,
+  "rereleaseYear": 2008,
+  "driveType": "4WD",
+  "category": "Off-Road Buggy",
+  "scale": "1/10",
+  "description": "The Tamiya Fire Dragon (1989) is a 4WD off-road buggy built on the Thundershot chassis. A front-mounted 540 motor drives both axles via a propeller shaft, with double wishbone suspension and oil dampers all round. It was re-released in 2008 (58403) and again in 2020 (47457).",
+  "stockParts": [
+    { "partNumber": "11825519", "name": "Body (transparent)", "category": "Body", "bagCode": null, "qty": 1 },
+    { "partNumber": "11835342", "name": "Chassis Cover", "category": "Body", "bagCode": null, "qty": 1 },
+    { "partNumber": "19335501", "name": "Chassis", "category": "Chassis", "bagCode": null, "qty": 1 },
+    { "partNumber": "10005300", "name": "A Parts", "category": "Chassis", "bagCode": null, "qty": 1 },
+    { "partNumber": "10005301", "name": "B Parts", "category": "Chassis", "bagCode": null, "qty": 1 },
+    { "partNumber": "19005288", "name": "C Parts", "category": "Chassis", "bagCode": null, "qty": 1 },
+    { "partNumber": "10005347", "name": "D Parts", "category": "Chassis", "bagCode": null, "qty": 1, "notes": "Purchase 2 sets for one car" },
+    { "partNumber": "19005257", "name": "E Parts", "category": "Chassis", "bagCode": null, "qty": 1 },
+    { "partNumber": "10005313", "name": "F Parts", "category": "Chassis", "bagCode": null, "qty": 1 },
+    { "partNumber": "19005296", "name": "G Parts", "category": "Chassis", "bagCode": null, "qty": 1 },
+    { "partNumber": "10115065", "name": "P Parts (Gray)", "category": "Chassis", "bagCode": null, "qty": 1 },
+    { "partNumber": "19225025", "name": "V, W Parts (Yellow)", "category": "Chassis", "bagCode": null, "qty": 2 },
+    { "partNumber": "10225034", "name": "X Parts (Yellow)", "category": "Chassis", "bagCode": null, "qty": 1, "notes": "Purchase 2 sets for one car" },
+    { "partNumber": "10225035", "name": "Y Parts (Yellow)", "category": "Chassis", "bagCode": null, "qty": 1, "notes": "Purchase 2 sets for one car" },
+    { "partNumber": "10225033", "name": "Z Parts", "category": "Chassis", "bagCode": null, "qty": 1 },
+    { "partNumber": "10445109", "name": "Bumper", "category": "Chassis", "bagCode": null, "qty": 1 },
+    { "partNumber": "10445108", "name": "Wheel (Black)", "category": "Wheels & Tires", "bagCode": null, "qty": 2, "notes": "Purchase 2 sets for one car" },
+    { "partNumber": "19805183", "name": "Tire", "category": "Wheels & Tires", "bagCode": null, "qty": 2, "notes": "Purchase 2 sets for one car" },
+    { "partNumber": "14305125", "name": "Motor Plate", "category": "Drivetrain", "bagCode": null, "qty": 1 },
+    { "partNumber": "13451280", "name": "Motor Mount", "category": "Drivetrain", "bagCode": null, "qty": 1 },
+    { "partNumber": "15395016", "name": "Propeller Shaft", "category": "Drivetrain", "bagCode": null, "qty": 1 },
+    { "partNumber": "12595043", "name": "Counter Shaft", "category": "Drivetrain", "bagCode": "BA18", "qty": 1 },
+    { "partNumber": "19805237", "name": "Propeller Joint", "category": "Drivetrain", "bagCode": "BA17", "qty": 2 },
+    { "partNumber": "19803252", "name": "1150 Thrust Washer", "category": "Drivetrain", "bagCode": "BA13", "qty": 3 },
+    { "partNumber": "19805185", "name": "850 Metal Bearing", "category": "Drivetrain", "bagCode": "BA12", "qty": 2, "notes": "Purchase 2 sets for one car" },
+    { "partNumber": "10555015", "name": "1150 Plastic Bearing", "category": "Drivetrain", "bagCode": "BA11", "qty": 10, "notes": "Purchase 2 sets for one car" },
+    { "partNumber": "13515003", "name": "15T Pinion Gear", "category": "Drivetrain", "bagCode": "BA14", "qty": 1 },
+    { "partNumber": "19805368", "name": "Gearbox Joint (Long, Short)", "category": "Drivetrain", "bagCode": "BB16", "qty": 1, "notes": "Purchase 2 sets for one car" },
+    { "partNumber": "19805551", "name": "Drive Shaft", "category": "Drivetrain", "bagCode": "BB18", "qty": 2, "notes": "Purchase 2 sets for one car" },
+    { "partNumber": "12595039", "name": "Wheel Axle", "category": "Drivetrain", "bagCode": "BB15", "qty": 1, "notes": "Purchase 4 sets for one car" },
+    { "partNumber": "50602", "name": "Differential Bevel Gear Set", "category": "Drivetrain", "bagCode": "BA6", "qty": 1, "notes": "Purchase 2 sets for one car" },
+    { "partNumber": "19805310", "name": "Front Coil Spring", "category": "Suspension", "bagCode": "BB25", "qty": 2 },
+    { "partNumber": "19805169", "name": "Rear Coil Spring", "category": "Suspension", "bagCode": "BB24", "qty": 2 },
+    { "partNumber": "19803247", "name": "Stabilizer Rod (Front, etc.)", "category": "Suspension", "bagCode": null, "qty": 1 },
+    { "partNumber": "19805363", "name": "Oil Seal (Gray)", "category": "Suspension", "bagCode": "BB21", "qty": 2 },
+    { "partNumber": "19805173", "name": "Oil Seal (Black)", "category": "Suspension", "bagCode": "BB22", "qty": 2 },
+    { "partNumber": "19805917", "name": "Rear Piston Rod", "category": "Suspension", "bagCode": "BB13", "qty": 2 },
+    { "partNumber": "19804526", "name": "4x6mm Bushing (Damper Mount)", "category": "Suspension", "bagCode": "BB12", "qty": 2, "notes": "Purchase 5 sets for one car" },
+    { "partNumber": "15325006", "name": "Tie Rod", "category": "Suspension", "bagCode": "BC11", "qty": 1 },
+    { "partNumber": "19804236", "name": "3x28mm Turnbuckle Shaft (Black)", "category": "Suspension", "bagCode": "BC13", "qty": 2, "notes": "Purchase 2 sets for one car" },
+    { "partNumber": "50597", "name": "3mm O-Ring (Brown)", "category": "Suspension", "bagCode": "BB19", "qty": 10 },
+    { "partNumber": "50601", "name": "Front Piston Rod", "category": "Suspension", "bagCode": "BB14", "qty": 2 },
+    { "partNumber": "54710", "name": "Silicone Oil (#400)", "category": "Suspension", "bagCode": null, "qty": 1 },
+    { "partNumber": "84195", "name": "3mm O-Ring (Black)", "category": "Suspension", "bagCode": "BB20", "qty": 10 },
+    { "partNumber": "53689", "name": "540 Motor", "category": "Electronics", "bagCode": null, "qty": 1 },
+    { "partNumber": "16095001", "name": "Antenna Pipe (38cm)", "category": "Electronics", "bagCode": null, "qty": 1 },
+    { "partNumber": "19805636", "name": "3x6mm Screw", "category": "Hardware", "bagCode": "BA2", "qty": 2 },
+    { "partNumber": "19805895", "name": "3x20mm Screw (Black)", "category": "Hardware", "bagCode": "BA1", "qty": 10 },
+    { "partNumber": "12300010", "name": "9mm Washer", "category": "Hardware", "bagCode": "BA6", "qty": 1, "notes": "Purchase 4 sets for one car" },
+    { "partNumber": "19805629", "name": "3x12mm Tapping Screw", "category": "Hardware", "bagCode": "BA3", "qty": 4, "notes": "Purchase 8 sets for one car" },
+    { "partNumber": "19805896", "name": "3mm Nut (Black)", "category": "Hardware", "bagCode": "BA8", "qty": 10 },
+    { "partNumber": "19805897", "name": "3mm Flange Nut", "category": "Hardware", "bagCode": "BA9", "qty": 10, "notes": "Purchase 3 sets for one car" },
+    { "partNumber": "19803246", "name": "4x12.5mm Tube", "category": "Hardware", "bagCode": "BA16", "qty": 2 },
+    { "partNumber": "19808132", "name": "5x25mm Tube", "category": "Hardware", "bagCode": "BA15", "qty": 2 },
+    { "partNumber": "18000036", "name": "3.5x90mm Rubber Tubing", "category": "Hardware", "bagCode": "BB23", "qty": 1 },
+    { "partNumber": "19805755", "name": "3x22mm Screw Pin", "category": "Hardware", "bagCode": "BB8", "qty": 4, "notes": "Purchase 2 sets for one car" },
+    { "partNumber": "19805620", "name": "3x25mm Screw", "category": "Hardware", "bagCode": "BB3", "qty": 2, "notes": "Purchase 5 sets for one car" },
+    { "partNumber": "19804163", "name": "3x27mm Screw (Black)", "category": "Hardware", "bagCode": "BB2", "qty": 10 },
+    { "partNumber": "19804478", "name": "3x36mm Screw", "category": "Hardware", "bagCode": "BB1", "qty": 5 },
+    { "partNumber": "19805976", "name": "3x46mm Screw Pin", "category": "Hardware", "bagCode": "BB7", "qty": 4 },
+    { "partNumber": "19803304", "name": "3x14mm Link Pin", "category": "Hardware", "bagCode": "BB9", "qty": 4 },
+    { "partNumber": "19803248", "name": "5mm Ball Nut", "category": "Hardware", "bagCode": "BB11", "qty": 5 },
+    { "partNumber": "84175", "name": "4x11.5mm Step Screw", "category": "Hardware", "bagCode": "BB5", "qty": 5 },
+    { "partNumber": "19805556", "name": "2x8mm Screw", "category": "Hardware", "bagCode": "BC4", "qty": 10 },
+    { "partNumber": "19804394", "name": "2.6x10 Binding Screw (Black)", "category": "Hardware", "bagCode": "BC3", "qty": 5 },
+    { "partNumber": "19805859", "name": "3x15mm Screw (Black)", "category": "Hardware", "bagCode": "BC1", "qty": 4 },
+    { "partNumber": "19804159", "name": "3x10mm Screw (Black)", "category": "Hardware", "bagCode": "BC2", "qty": 10 },
+    { "partNumber": "19804230", "name": "2mm Nut", "category": "Hardware", "bagCode": "BC8", "qty": 10 },
+    { "partNumber": "19442103", "name": "3x8mm Tapping Screw", "category": "Hardware", "bagCode": "BC6", "qty": 2, "notes": "Purchase 5 sets for one car" },
+    { "partNumber": "19805557", "name": "4mm Flange Lock Nut", "category": "Hardware", "bagCode": "BC9", "qty": 4, "notes": "Purchase 2 sets for one car" },
+    { "partNumber": "19805758", "name": "2mm Washer", "category": "Hardware", "bagCode": "BC7", "qty": 5 },
+    { "partNumber": "19804154", "name": "5mm Ball Connector (2mm Screw) (Black)", "category": "Hardware", "bagCode": "BC10", "qty": 2 },
+    { "partNumber": "50170", "name": "Nylon Band Set (Large x2, etc.)", "category": "Hardware", "bagCode": null, "qty": 1 },
+    { "partNumber": "50197", "name": "Snap Pin Set", "category": "Hardware", "bagCode": "BT1", "qty": 1, "notes": "BT1 x5, Large x10" },
+    { "partNumber": "50380", "name": "E-Ring Set", "category": "Hardware", "bagCode": "BA10", "qty": 1, "notes": "BA10 x7, BB6 x12" },
+    { "partNumber": "50575", "name": "2.6x10mm Tapping Screw", "category": "Hardware", "bagCode": "BA4", "qty": 5, "notes": "Purchase 4 sets for one car" },
+    { "partNumber": "50576", "name": "3mm Grub Screw", "category": "Hardware", "bagCode": "BA5", "qty": 10 },
+    { "partNumber": "50577", "name": "3x10mm Tapping Screw", "category": "Hardware", "bagCode": "BC5", "qty": 10 },
+    { "partNumber": "50583", "name": "3x15mm Tapping Screw", "category": "Hardware", "bagCode": "BB4", "qty": 10 },
+    { "partNumber": "50586", "name": "3mm Washer", "category": "Hardware", "bagCode": "BA7", "qty": 15 },
+    { "partNumber": "50588", "name": "2mm E-Ring", "category": "Hardware", "bagCode": "BB6", "qty": 15 },
+    { "partNumber": "50592", "name": "5mm Ball Connector", "category": "Hardware", "bagCode": "BB10", "qty": 10 },
+    { "partNumber": "50594", "name": "2x10mm Shaft", "category": "Hardware", "bagCode": "BC12", "qty": 10 },
+    { "partNumber": "50595", "name": "Nylon Band w/Metal Hook", "category": "Hardware", "bagCode": null, "qty": 10 },
+    { "partNumber": "50596", "name": "5mm Adjuster", "category": "Hardware", "bagCode": "BC14", "qty": 6 },
+    { "partNumber": "14305026", "name": "Wrench", "category": "Miscellaneous", "bagCode": null, "qty": 1 },
+    { "partNumber": "19495532", "name": "Stickers", "category": "Miscellaneous", "bagCode": null, "qty": 1 },
+    { "partNumber": "11056990", "name": "Instructions", "category": "Miscellaneous", "bagCode": null, "qty": 1 },
+    { "partNumber": "50038", "name": "Tool Set (Box Wrench, 1.5/2.5mm Hex Wrench)", "category": "Miscellaneous", "bagCode": null, "qty": 1 },
+    { "partNumber": "50171", "name": "Heat Resistant Double-Sided Tape", "category": "Miscellaneous", "bagCode": null, "qty": 5 },
+    { "partNumber": "87099", "name": "Cera-Grease HG", "category": "Miscellaneous", "bagCode": null, "qty": 1 }
+  ],
+  "hopUps": [
+    {
+      "partNumber": "53008",
+      "name": "1150 Sealed Ball Bearing Set (4 pcs.)",
+      "category": "Bearings",
+      "description": "Replaces plastic bearings with sealed metal ball bearings for smoother running and reduced friction.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53029",
+      "name": "1150 Sealed Ball Bearing Set (2 pcs.)",
+      "category": "Bearings",
+      "description": "Sealed metal ball bearings as a smaller-quantity alternative to the 4-piece set.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53030",
+      "name": "850 Sealed Ball Bearing Set (4 pcs.)",
+      "category": "Bearings",
+      "description": "Replaces the stock 850 metal bearings with sealed ball bearings for reduced friction.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53068",
+      "name": "RS-540 Sport-Tuned Motor",
+      "category": "Electronics",
+      "description": "A faster-wound 540-size motor offering increased speed over the stock 540 motor.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53779",
+      "name": "GT-Tuned Motor (25T)",
+      "category": "Electronics",
+      "description": "A high-performance 25-turn motor offering significantly more power than the stock 540.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53929",
+      "name": "Dirt-Tuned Motor (27T)",
+      "category": "Electronics",
+      "description": "A 27-turn motor tuned for off-road use, balancing torque and speed on loose terrain.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53983",
+      "name": "Lightly-Tuned Motor (28T)",
+      "category": "Electronics",
+      "description": "A mildly tuned 28-turn motor offering a modest power increase over the stock 540.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53132",
+      "name": "R/C Fluorescent Color Antenna Pipes (4 pcs.)",
+      "category": "Electronics",
+      "description": "Fluorescent-coloured antenna pipes for easy visibility during driving.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53443",
+      "name": "Silicone Damper Oil Soft Set (#200, #300, #400)",
+      "category": "Suspension",
+      "description": "Three bottles of soft-weight silicone damper oil for tuning the Fire Dragon's oil dampers.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53444",
+      "name": "Silicone Damper Oil Medium Set (#500, #600, #700)",
+      "category": "Suspension",
+      "description": "Three bottles of medium-weight silicone damper oil for the Fire Dragon's oil dampers.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53445",
+      "name": "Silicone Damper Oil Hard Set (#800, #900, #1000)",
+      "category": "Suspension",
+      "description": "Three bottles of high-viscosity silicone damper oil for firmer damping on rough terrain.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53014",
+      "name": "3x20mm Titanium Round Head Screw (10 pcs.)",
+      "category": "Hardware",
+      "description": "Lightweight titanium screws for weight reduction and corrosion resistance.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53015",
+      "name": "3x8mm Titanium Tapping Screw (10 pcs.)",
+      "category": "Hardware",
+      "description": "Lightweight titanium tapping screws for weight reduction and corrosion resistance.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53016",
+      "name": "3x12mm Titanium Tapping Screw (10 pcs.)",
+      "category": "Hardware",
+      "description": "Lightweight titanium tapping screws for weight reduction and corrosion resistance.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53024",
+      "name": "4mm Aluminum Flange Lock Nut (10 pcs.)",
+      "category": "Hardware",
+      "description": "Lightweight aluminum flange lock nuts as a direct replacement for the stock steel nuts.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53159",
+      "name": "4mm Anodized Aluminum Flange Lock Nuts — Blue (10 pcs.)",
+      "category": "Hardware",
+      "description": "Blue anodized aluminum flange lock nuts for a coloured appearance and reduced weight.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53160",
+      "name": "4mm Anodized Aluminum Flange Lock Nuts — Red (10 pcs.)",
+      "category": "Hardware",
+      "description": "Red anodized aluminum flange lock nuts for a coloured appearance and reduced weight.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53161",
+      "name": "4mm Anodized Aluminum Flange Lock Nuts — Gold (10 pcs.)",
+      "category": "Hardware",
+      "description": "Gold anodized aluminum flange lock nuts for a coloured appearance and reduced weight.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53162",
+      "name": "4mm Anodized Aluminum Flange Lock Nuts — Black (10 pcs.)",
+      "category": "Hardware",
+      "description": "Black anodized aluminum flange lock nuts for a coloured appearance and reduced weight.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53621",
+      "name": "Color Nylon Band — Blue (10 pcs.)",
+      "category": "Hardware",
+      "description": "Blue-coloured nylon bands as a coloured alternative to the stock black bands.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53622",
+      "name": "Color Nylon Band — Purple (10 pcs.)",
+      "category": "Hardware",
+      "description": "Purple-coloured nylon bands as a coloured alternative to the stock black bands.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53623",
+      "name": "Color Nylon Band — Pink (10 pcs.)",
+      "category": "Hardware",
+      "description": "Pink-coloured nylon bands as a coloured alternative to the stock black bands.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53624",
+      "name": "Color Nylon Band — Gold (10 pcs.)",
+      "category": "Hardware",
+      "description": "Gold-coloured nylon bands as a coloured alternative to the stock black bands.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53642",
+      "name": "5mm Aluminum Ball Connector — Blue (10 pcs.)",
+      "category": "Hardware",
+      "description": "Blue anodized aluminum ball connectors as lightweight, coloured replacements for the stock plastic ones.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53643",
+      "name": "5mm Aluminum Ball Connector — Red (10 pcs.)",
+      "category": "Hardware",
+      "description": "Red anodized aluminum ball connectors as lightweight, coloured replacements for the stock plastic ones.",
+      "compatibility": ["Fire Dragon"]
+    },
+    {
+      "partNumber": "53439",
+      "name": "Anti-Wear Grease",
+      "category": "Miscellaneous",
+      "description": "Anti-wear grease for gears and drivetrain components, extending service life under load.",
+      "compatibility": ["Fire Dragon"]
+    }
+  ]
+}

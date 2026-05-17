@@ -15,6 +15,7 @@ import roughRiderData from './data/rough-rider.json'
 import superShotData from './data/super-shot.json'
 import avanteData from './data/avante.json'
 import holidayBuggyData from './data/holiday-buggy.json'
+import fireDragonData from './data/fire-dragon.json'
 import ModelSelector from './components/ModelSelector'
 import PartsList from './components/PartsList'
 import HopUpList from './components/HopUpList'
@@ -37,6 +38,7 @@ const ALL_MODEL_DATA = {
   'super-shot': superShotData,
   avante: avanteData,
   'holiday-buggy': holidayBuggyData,
+  'fire-dragon': fireDragonData,
 }
 
 const SEARCH_INDEX = Object.entries(ALL_MODEL_DATA).flatMap(([modelId, data]) => [

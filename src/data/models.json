@@ -141,6 +141,16 @@
     "scale": "1/10"
   },
   {
+    "id": "fire-dragon",
+    "name": "Fire Dragon",
+    "itemNumbers": ["58078", "58403", "47457"],
+    "releaseYear": 1989,
+    "rereleaseYear": 2008,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
     "id": "holiday-buggy",
     "name": "Holiday Buggy",
     "itemNumbers": ["58023", "58470"],
