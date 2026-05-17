@@ -18,6 +18,8 @@ import holidayBuggyData from './data/holiday-buggy.json'
 import fireDragonData from './data/fire-dragon.json'
 import bigwigData from './data/bigwig.json'
 import superAstute from './data/super-astute.json'
+import topForceData from './data/top-force.json'
+import terraScorcherData from './data/terra-scorcher.json'
 import ModelSelector from './components/ModelSelector'
 import PartsList from './components/PartsList'
 import HopUpList from './components/HopUpList'
@@ -43,6 +45,8 @@ const ALL_MODEL_DATA = {
   'fire-dragon': fireDragonData,
   bigwig: bigwigData,
   'super-astute': superAstute,
+  'top-force': topForceData,
+  'terra-scorcher': terraScorcherData,
 }
 
 const SEARCH_INDEX = Object.entries(ALL_MODEL_DATA).flatMap(([modelId, data]) => [

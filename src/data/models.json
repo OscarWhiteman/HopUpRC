@@ -179,5 +179,25 @@
     "driveType": "2WD",
     "category": "Off-Road Buggy",
     "scale": "1/10"
+  },
+  {
+    "id": "top-force",
+    "name": "Top Force",
+    "itemNumbers": ["58100", "58362", "47350"],
+    "releaseYear": 1991,
+    "rereleaseYear": 2005,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
+    "id": "terra-scorcher",
+    "name": "Terra Scorcher",
+    "itemNumbers": ["58075", "47442"],
+    "releaseYear": 1988,
+    "rereleaseYear": 2020,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
   }
 ]
