@@ -201,6 +201,26 @@
     "scale": "1/10"
   },
   {
+    "id": "fast-attack-vehicle",
+    "name": "Fast Attack Vehicle",
+    "itemNumbers": ["58046", "58496"],
+    "releaseYear": 1984,
+    "rereleaseYear": 2011,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
+    "id": "super-storm-dragon",
+    "name": "Super Storm Dragon",
+    "itemNumbers": ["47438"],
+    "releaseYear": 2020,
+    "rereleaseYear": null,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
     "id": "thunder-dragon",
     "name": "Thunder Dragon",
     "itemNumbers": ["58073", "47458"],
