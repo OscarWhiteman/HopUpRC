@@ -141,6 +141,26 @@
     "scale": "1/10"
   },
   {
+    "id": "super-astute",
+    "name": "Super Astute",
+    "itemNumbers": ["58097", "47381"],
+    "releaseYear": 1991,
+    "rereleaseYear": 2018,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
+    "id": "bigwig",
+    "name": "Bigwig",
+    "itemNumbers": ["58057", "47330"],
+    "releaseYear": 1986,
+    "rereleaseYear": 2017,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
     "id": "fire-dragon",
     "name": "Fire Dragon",
     "itemNumbers": ["58078", "58403", "47457"],
