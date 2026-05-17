@@ -191,6 +191,26 @@
     "scale": "1/10"
   },
   {
+    "id": "grasshopper-ii",
+    "name": "Grasshopper II",
+    "itemNumbers": ["58086", "58643"],
+    "releaseYear": 1988,
+    "rereleaseYear": 2017,
+    "driveType": "2WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
+    "id": "vqs",
+    "name": "VQS",
+    "itemNumbers": ["58076", "58686"],
+    "releaseYear": 1988,
+    "rereleaseYear": 2020,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
     "id": "terra-scorcher",
     "name": "Terra Scorcher",
     "itemNumbers": ["58075", "47442"],

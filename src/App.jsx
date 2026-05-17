@@ -20,6 +20,8 @@ import bigwigData from './data/bigwig.json'
 import superAstute from './data/super-astute.json'
 import topForceData from './data/top-force.json'
 import terraScorcherData from './data/terra-scorcher.json'
+import grasshopperIIData from './data/grasshopper-ii.json'
+import vqsData from './data/vqs.json'
 import ModelSelector from './components/ModelSelector'
 import PartsList from './components/PartsList'
 import HopUpList from './components/HopUpList'
@@ -47,6 +49,8 @@ const ALL_MODEL_DATA = {
   'super-astute': superAstute,
   'top-force': topForceData,
   'terra-scorcher': terraScorcherData,
+  'grasshopper-ii': grasshopperIIData,
+  vqs: vqsData,
 }
 
 const SEARCH_INDEX = Object.entries(ALL_MODEL_DATA).flatMap(([modelId, data]) => [
