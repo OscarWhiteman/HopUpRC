@@ -119,5 +119,35 @@
     "driveType": "2WD",
     "category": "Off-Road Buggy",
     "scale": "1/10"
+  },
+  {
+    "id": "super-shot",
+    "name": "Super Shot",
+    "itemNumbers": ["58054", "58517"],
+    "releaseYear": 1986,
+    "rereleaseYear": 2012,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
+    "id": "avante",
+    "name": "Avante",
+    "itemNumbers": ["58072", "58489"],
+    "releaseYear": 1988,
+    "rereleaseYear": 2011,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
+    "id": "holiday-buggy",
+    "name": "Holiday Buggy",
+    "itemNumbers": ["58023", "58470"],
+    "releaseYear": 1980,
+    "rereleaseYear": 2010,
+    "driveType": "2WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
   }
 ]

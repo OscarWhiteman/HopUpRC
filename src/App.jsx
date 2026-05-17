@@ -12,6 +12,9 @@ import boomerangData from './data/boomerang.json'
 import foxData from './data/fox.json'
 import sandScorcherData from './data/sand-scorcher.json'
 import roughRiderData from './data/rough-rider.json'
+import superShotData from './data/super-shot.json'
+import avanteData from './data/avante.json'
+import holidayBuggyData from './data/holiday-buggy.json'
 import ModelSelector from './components/ModelSelector'
 import PartsList from './components/PartsList'
 import HopUpList from './components/HopUpList'
@@ -31,6 +34,9 @@ const ALL_MODEL_DATA = {
   fox: foxData,
   'sand-scorcher': sandScorcherData,
   'rough-rider': roughRiderData,
+  'super-shot': superShotData,
+  avante: avanteData,
+  'holiday-buggy': holidayBuggyData,
 }
 
 const SEARCH_INDEX = Object.entries(ALL_MODEL_DATA).flatMap(([modelId, data]) => [
