@@ -23,6 +23,10 @@ import terraScorcherData from './data/terra-scorcher.json'
 import grasshopperIIData from './data/grasshopper-ii.json'
 import vqsData from './data/vqs.json'
 import thunderDragonData from './data/thunder-dragon.json'
+import superStormDragonData from './data/super-storm-dragon.json'
+import fastAttackVehicleData from './data/fast-attack-vehicle.json'
+import stadiumBlitzerData from './data/stadium-blitzer.json'
+import mantaRayData from './data/manta-ray.json'
 import ModelSelector from './components/ModelSelector'
 import PartsList from './components/PartsList'
 import HopUpList from './components/HopUpList'
@@ -53,6 +57,10 @@ const ALL_MODEL_DATA = {
   'grasshopper-ii': grasshopperIIData,
   vqs: vqsData,
   'thunder-dragon': thunderDragonData,
+  'super-storm-dragon': superStormDragonData,
+  'fast-attack-vehicle': fastAttackVehicleData,
+  'stadium-blitzer': stadiumBlitzerData,
+  'manta-ray': mantaRayData,
 }
 
 const SEARCH_INDEX = Object.entries(ALL_MODEL_DATA).flatMap(([modelId, data]) => [

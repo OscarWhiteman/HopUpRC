@@ -241,6 +241,26 @@
     "scale": "1/10"
   },
   {
+    "id": "manta-ray",
+    "name": "Manta Ray",
+    "itemNumbers": ["58087"],
+    "releaseYear": 1990,
+    "rereleaseYear": null,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
+    "id": "stadium-blitzer",
+    "name": "Stadium Blitzer",
+    "itemNumbers": ["58106", "58482"],
+    "releaseYear": 1992,
+    "rereleaseYear": 2011,
+    "driveType": "2WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
     "id": "terra-scorcher",
     "name": "Terra Scorcher",
     "itemNumbers": ["58075", "47442"],
