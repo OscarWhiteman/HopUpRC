@@ -27,6 +27,7 @@ import superStormDragonData from './data/super-storm-dragon.json'
 import fastAttackVehicleData from './data/fast-attack-vehicle.json'
 import stadiumBlitzerData from './data/stadium-blitzer.json'
 import mantaRayData from './data/manta-ray.json'
+import thunderShotData from './data/thunder-shot.json'
 import ModelSelector from './components/ModelSelector'
 import PartsList from './components/PartsList'
 import HopUpList from './components/HopUpList'
@@ -61,6 +62,7 @@ const ALL_MODEL_DATA = {
   'fast-attack-vehicle': fastAttackVehicleData,
   'stadium-blitzer': stadiumBlitzerData,
   'manta-ray': mantaRayData,
+  'thunder-shot': thunderShotData,
 }
 
 const SEARCH_INDEX = Object.entries(ALL_MODEL_DATA).flatMap(([modelId, data]) => [

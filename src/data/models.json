@@ -269,5 +269,15 @@
     "driveType": "4WD",
     "category": "Off-Road Buggy",
     "scale": "1/10"
+  },
+  {
+    "id": "thunder-shot",
+    "name": "Thunder Shot",
+    "itemNumbers": ["58067", "58361", "58706"],
+    "releaseYear": 1987,
+    "rereleaseYear": 2005,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
   }
 ]
