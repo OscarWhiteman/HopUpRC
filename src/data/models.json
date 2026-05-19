@@ -279,5 +279,15 @@
     "driveType": "4WD",
     "category": "Off-Road Buggy",
     "scale": "1/10"
+  },
+  {
+    "id": "top-force-evolution",
+    "name": "Top Force Evolution",
+    "itemNumbers": ["58107", "47470"],
+    "releaseYear": 1992,
+    "rereleaseYear": 2021,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
   }
 ]
