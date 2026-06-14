@@ -3,15 +3,22 @@ import { useState, useRef, useEffect } from 'react'
 function highlight(text, query) {
   const str = String(text ?? '')
   if (!query || !str) return str
-  const idx = str.toLowerCase().indexOf(query.toLowerCase())
-  if (idx === -1) return str
-  return (
-    <>
-      {str.slice(0, idx)}
-      <mark className="search-highlight">{str.slice(idx, idx + query.length)}</mark>
-      {str.slice(idx + query.length)}
-    </>
-  )
+  const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  const regex = new RegExp(escaped, 'gi')
+  const parts = []
+  let last = 0
+  let match
+  while ((match = regex.exec(str)) !== null) {
+    if (match.index > last) parts.push(str.slice(last, match.index))
+    parts.push(
+      <mark key={match.index} className="search-highlight">
+        {str.slice(match.index, match.index + match[0].length)}
+      </mark>
+    )
+    last = match.index + match[0].length
+  }
+  if (last < str.length) parts.push(str.slice(last))
+  return parts.length > 0 ? parts : str
 }
 
 function truncate(text, max = 90) {
@@ -23,8 +30,15 @@ export default function GlobalSearch({ searchIndex, onSelectModel }) {
   const [query, setQuery] = useState('')
   const [focusedIndex, setFocusedIndex] = useState(-1)
   const resultRefs = useRef([])
+  const inputRef = useRef(null)
 
-  const rawResults = query.trim().length > 1
+  useEffect(() => {
+    if (!window.matchMedia('(hover: none) and (pointer: coarse)').matches) {
+      inputRef.current?.focus()
+    }
+  }, [])
+
+  const allResults = query.trim().length > 1
     ? (() => {
         const q = query.toLowerCase()
         const seen = new Set()
@@ -40,9 +54,11 @@ export default function GlobalSearch({ searchIndex, onSelectModel }) {
             seen.add(key)
             return true
           })
-          .slice(0, 30)
       })()
     : []
+
+  const rawResults = allResults.slice(0, 30)
+  const totalResults = allResults.length
 
   const grouped = {}
   for (const r of rawResults) {
@@ -70,7 +86,7 @@ export default function GlobalSearch({ searchIndex, onSelectModel }) {
       setFocusedIndex((i) => Math.min(i + 1, flatResults.length - 1))
     } else if (e.key === 'ArrowUp') {
       e.preventDefault()
-      setFocusedIndex((i) => Math.max(i - 1, 0))
+      setFocusedIndex((i) => Math.max(i - 1, -1))
     } else if (e.key === 'Enter') {
       e.preventDefault()
       const target = focusedIndex >= 0 ? flatResults[focusedIndex] : flatResults[0]
@@ -92,13 +108,13 @@ export default function GlobalSearch({ searchIndex, onSelectModel }) {
           Search across {searchIndex.length} parts — stock and hop-ups — from all models
         </p>
         <input
+          ref={inputRef}
           className="search-hero-input"
           type="search"
           placeholder="Part number, name, or description…"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={handleKeyDown}
-          autoFocus
           aria-label="Search all parts"
         />
         {flatResults.length > 0 && (
@@ -113,7 +129,9 @@ export default function GlobalSearch({ searchIndex, onSelectModel }) {
       {rawResults.length > 0 && (
         <div className="global-results">
           <p className="global-results-count">
-            {rawResults.length} result{rawResults.length !== 1 ? 's' : ''}
+            {totalResults > 30
+              ? `Showing ${rawResults.length} of ${totalResults} results`
+              : `${rawResults.length} result${rawResults.length !== 1 ? 's' : ''}`}
           </p>
           {Object.entries(grouped).map(([modelName, items]) => (
             <div key={modelName} className="global-result-group">

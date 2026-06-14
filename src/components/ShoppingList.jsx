@@ -10,12 +10,13 @@ export default function ShoppingList({ hopUpList, allModelData, onToggleStatus, 
   }
 
   const grouped = {}
+  let orphanCount = 0
   for (const [key, status] of entries) {
     const sep = key.indexOf('|')
     const modelId = key.slice(0, sep)
     const partNumber = key.slice(sep + 1)
     const part = allModelData[modelId]?.hopUps.find((h) => h.partNumber === partNumber)
-    if (!part) continue
+    if (!part) { orphanCount++; continue }
     if (!grouped[modelId]) grouped[modelId] = []
     grouped[modelId].push({ ...part, status, key })
   }
@@ -81,6 +82,11 @@ export default function ShoppingList({ hopUpList, allModelData, onToggleStatus, 
           </div>
         )
       })}
+      {orphanCount > 0 && (
+        <p className="sl-orphan-notice">
+          {orphanCount} saved item{orphanCount !== 1 ? 's' : ''} could not be found and may have been removed from the database.
+        </p>
+      )}
     </div>
   )
 }

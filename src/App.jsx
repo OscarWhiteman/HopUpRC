@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import models from './data/models.json'
 import hornetData from './data/hornet.json'
 import lunchboxData from './data/lunchbox.json'
@@ -29,6 +29,7 @@ import stadiumBlitzerData from './data/stadium-blitzer.json'
 import mantaRayData from './data/manta-ray.json'
 import thunderShotData from './data/thunder-shot.json'
 import topForceEvolutionData from './data/top-force-evolution.json'
+import fightingBuggyData from './data/fighting-buggy.json'
 import ModelSelector from './components/ModelSelector'
 import PartsList from './components/PartsList'
 import HopUpList from './components/HopUpList'
@@ -65,6 +66,7 @@ const ALL_MODEL_DATA = {
   'manta-ray': mantaRayData,
   'thunder-shot': thunderShotData,
   'top-force-evolution': topForceEvolutionData,
+  'fighting-buggy': fightingBuggyData,
 }
 
 const SEARCH_INDEX = Object.entries(ALL_MODEL_DATA).flatMap(([modelId, data]) => [
@@ -96,7 +98,37 @@ export default function App() {
   })
 
   const modelDetail = selectedModelId ? ALL_MODEL_DATA[selectedModelId] : null
-  const listCount = Object.keys(hopUpList).length
+  const listCount = Object.entries(hopUpList).filter(([key]) => {
+    const bar = key.indexOf('|')
+    const modelId = key.slice(0, bar)
+    const partNumber = key.slice(bar + 1)
+    return ALL_MODEL_DATA[modelId]?.hopUps.some((h) => h.partNumber === partNumber)
+  }).length
+
+  useEffect(() => {
+    history.replaceState({ view: 'home' }, '')
+    function onPopState(e) {
+      const s = e.state ?? { view: 'home' }
+      if (s.view === 'model') {
+        setSelectedModelId(s.modelId)
+        setShowShoppingList(false)
+        setCategoryFilter('All')
+        setActiveTab(TABS[0])
+        setSearchQuery('')
+      } else if (s.view === 'shopping') {
+        setShowShoppingList(true)
+        setSelectedModelId(null)
+      } else {
+        setSelectedModelId(null)
+        setShowShoppingList(false)
+        setCategoryFilter('All')
+        setActiveTab(TABS[0])
+        setSearchQuery('')
+      }
+    }
+    window.addEventListener('popstate', onPopState)
+    return () => window.removeEventListener('popstate', onPopState)
+  }, [])
 
   function handleSelectModel(id) {
     setShowShoppingList(false)
@@ -105,6 +137,16 @@ export default function App() {
     setActiveTab(TABS[0])
     setSearchQuery('')
     setSelectedModelId(id)
+    history.pushState({ view: 'model', modelId: id }, '')
+  }
+
+  function handleHome() {
+    setSelectedModelId(null)
+    setShowShoppingList(false)
+    setCategoryFilter('All')
+    setActiveTab(TABS[0])
+    setSearchQuery('')
+    history.pushState({ view: 'home' }, '')
   }
 
   function toggleHopUpStatus(modelId, partNumber, status) {
@@ -165,16 +207,21 @@ export default function App() {
     <div className="app">
       <header className="site-header">
         <div className="header-inner">
-          <div className="site-logo">
+          <button className="site-logo" onClick={handleHome} aria-label="Go to home">
             <span className="logo-hop">Hop</span>
             <span className="logo-up">Up</span>
             <span className="logo-rc">RC</span>
-          </div>
+          </button>
           <p className="site-tagline">Vintage Tamiya RC Parts Reference</p>
           <div className="header-actions">
             <button
               className={`list-btn${showShoppingList ? ' active' : ''}`}
-              onClick={() => setShowShoppingList((s) => !s)}
+              onClick={() => {
+                const next = !showShoppingList
+                setShowShoppingList(next)
+                setSelectedModelId(null)
+                history.pushState(next ? { view: 'shopping' } : { view: 'home' }, '')
+              }}
             >
               My List
               {listCount > 0 && <span className="list-badge">{listCount}</span>}
@@ -186,11 +233,6 @@ export default function App() {
       <main className="main-content">
         {showShoppingList ? (
           <>
-            <ModelSelector
-              models={models}
-              selectedModelId={selectedModelId}
-              onSelect={handleSelectModel}
-            />
             <ShoppingList
               hopUpList={hopUpList}
               allModelData={ALL_MODEL_DATA}
@@ -200,11 +242,6 @@ export default function App() {
           </>
         ) : selectedModelId ? (
           <>
-            <ModelSelector
-              models={models}
-              selectedModelId={selectedModelId}
-              onSelect={handleSelectModel}
-            />
             <section className="model-detail">
                 <div className="model-header">
                   <div>
@@ -262,6 +299,7 @@ export default function App() {
 
                 {activeTab === TABS[0] && (
                   <PartsList
+                    key={selectedModelId}
                     parts={filteredParts}
                     crossRef={CROSS_REF}
                     currentModelName={modelDetail.name}

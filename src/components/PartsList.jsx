@@ -77,7 +77,7 @@ export default function PartsList({ parts, crossRef, currentModelName }) {
               (m) => m !== currentModelName
             )
             return (
-              <tr key={`${part.partNumber}-${part.bagCode ?? i}`}>
+              <tr key={part.partNumber}>
                 <td className="part-number">{part.partNumber}</td>
                 <td className="bag-code">{part.bagCode ?? '—'}</td>
                 <td className="part-name">{part.name}</td>
