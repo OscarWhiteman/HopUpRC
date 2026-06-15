@@ -29,6 +29,7 @@ import stadiumBlitzerData from './data/stadium-blitzer.json'
 import mantaRayData from './data/manta-ray.json'
 import thunderShotData from './data/thunder-shot.json'
 import topForceEvolutionData from './data/top-force-evolution.json'
+import egressData from './data/egress.json'
 import fightingBuggyData from './data/fighting-buggy.json'
 import ModelSelector from './components/ModelSelector'
 import PartsList from './components/PartsList'
@@ -66,6 +67,7 @@ const ALL_MODEL_DATA = {
   'manta-ray': mantaRayData,
   'thunder-shot': thunderShotData,
   'top-force-evolution': topForceEvolutionData,
+  egress: egressData,
   'fighting-buggy': fightingBuggyData,
 }
 
@@ -138,6 +140,7 @@ export default function App() {
     setSearchQuery('')
     setSelectedModelId(id)
     history.pushState({ view: 'model', modelId: id }, '')
+    window.scrollTo({ top: 0, behavior: 'instant' })
   }
 
   function handleHome() {

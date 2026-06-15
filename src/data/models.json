@@ -291,6 +291,16 @@
     "scale": "1/10"
   },
   {
+    "id": "egress",
+    "name": "Egress",
+    "itemNumbers": ["58079", "58583", "47489"],
+    "releaseYear": 1989,
+    "rereleaseYear": 2013,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
     "id": "fighting-buggy",
     "name": "Fighting Buggy / Super Champ",
     "itemNumbers": ["58034", "84389", "47304"],
