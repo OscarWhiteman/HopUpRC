@@ -359,5 +359,15 @@
     "driveType": "4WD",
     "category": "Off-Road Buggy",
     "scale": "1/10"
+  },
+  {
+    "id": "wild-willy-2",
+    "name": "Wild Willy 2",
+    "itemNumbers": ["58242"],
+    "releaseYear": 1999,
+    "rereleaseYear": null,
+    "driveType": "4WD",
+    "category": "Off-Road Truck",
+    "scale": "1/10"
   }
 ]
