@@ -399,5 +399,15 @@
     "driveType": "4WD",
     "category": "Off-Road Truck",
     "scale": "1/10"
+  },
+  {
+    "id": "bullhead",
+    "name": "Bullhead",
+    "itemNumbers": ["58089", "58535"],
+    "releaseYear": 1990,
+    "rereleaseYear": 2012,
+    "driveType": "4WD",
+    "category": "Monster Truck",
+    "scale": "1/10"
   }
 ]
