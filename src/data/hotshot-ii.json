@@ -1,14 +1,14 @@
 {
   "id": "hotshot-ii",
   "name": "Hotshot II",
-  "itemNumbers": ["58062", "58710", "58737"],
+  "itemNumbers": ["58062", "58737"],
   "releaseYear": 1987,
-  "rereleaseYear": 2023,
+  "rereleaseYear": 2024,
   "driveType": "4WD",
   "category": "Off-Road Buggy",
   "scale": "1/10",
   "motor": "Tamiya 540",
-  "description": "The Tamiya Hotshot II is a 1/10 scale 4WD shaft-driven off-road racing buggy, successor to the original Hotshot (58047, 1985). First released on 21 May 1987 (58062), it features double wishbone suspension at all four corners with oil-filled CVA dampers, a sealed multi-ratio gearbox with selectable 13T/15T/16T/17T pinion options, and a distinctive black body with orange-stripe livery. Re-released in collaboration with Blockhead Motors on 18 March 2023 (58710) in a special blue colourway, then in standard form on 16 March 2024 (58737). Parts data corresponds to the 2024 re-release (58737).",
+  "description": "The Tamiya Hotshot II is a 1/10 scale 4WD shaft-driven off-road racing buggy, successor to the original Hotshot (58047, 1985). First released on 21 May 1987 (58062), it features double wishbone suspension at all four corners with oil-filled CVA dampers, a sealed multi-ratio gearbox with selectable 13T/15T/16T/17T pinion options, and a distinctive black body with orange-stripe livery. Re-released in standard form on 16 March 2024 (58737). Parts data corresponds to the 2024 re-release (58737). See also: Hotshot II Blockhead Motors Edition (58710).",
   "stockParts": [
     { "partNumber": "19803465", "name": "Body, Wing (Transparent)", "category": "Body", "bagCode": null, "qty": 1, "notes": "Pre-painted body not available from Tamiya Customer Service. Contact your local Tamiya agent for availability of transparent body." },
     { "partNumber": "19005163", "name": "A, B Parts (Black)", "category": "Body", "bagCode": null, "qty": 1 },

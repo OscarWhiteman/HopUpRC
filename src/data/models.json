@@ -343,9 +343,19 @@
   {
     "id": "hotshot-ii",
     "name": "Hotshot II",
-    "itemNumbers": ["58062", "58710", "58737"],
+    "itemNumbers": ["58062", "58737"],
     "releaseYear": 1987,
-    "rereleaseYear": 2023,
+    "rereleaseYear": 2024,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
+    "id": "hotshot-ii-blockhead",
+    "name": "Hotshot II (Blockhead Motors Edition)",
+    "itemNumbers": ["58710"],
+    "releaseYear": 2023,
+    "rereleaseYear": null,
     "driveType": "4WD",
     "category": "Off-Road Buggy",
     "scale": "1/10"
