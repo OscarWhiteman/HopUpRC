@@ -1,13 +1,14 @@
 {
   "id": "wild-one",
   "name": "Wild One",
-  "itemNumbers": ["58065"],
-  "releaseYear": 1987,
-  "rereleaseYear": null,
+  "itemNumbers": ["58050", "58525"],
+  "releaseYear": 1985,
+  "rereleaseYear": 2012,
   "driveType": "4WD",
   "category": "Off-Road Buggy",
   "scale": "1/10",
-  "description": "The Tamiya Wild One (1987) is a 4WD off-road buggy with a distinctive open-wheel design and included driver figure. It ships with fully oil-filled front and rear dampers as standard, two interchangeable pinion gears for gear ratio adjustment, and a protective roll cage. Its long-travel suspension made it well-suited to rough terrain.",
+  "motor": "Tamiya 540",
+  "description": "The Tamiya Wild One is a 1/10 scale 4WD off-road buggy originally released on 25 September 1985 (58050) and re-released in 2012 (58525). It features a distinctive open-wheel design with an included driver figure, fully oil-filled front and rear dampers, two interchangeable pinion gears for gear ratio adjustment, and a protective roll cage. Its long-travel suspension made it well-suited to rough terrain.",
   "stockParts": [
     { "partNumber": "11825729", "name": "Body, Roof, Driver Figure", "category": "Body", "bagCode": null, "qty": 1 },
     { "partNumber": "19335649", "name": "Roll Cage", "category": "Body", "bagCode": null, "qty": 1 },
