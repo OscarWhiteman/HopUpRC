@@ -34,6 +34,7 @@ import xr311Data from './data/xr311.json'
 import egressData from './data/egress.json'
 import fightingBuggyData from './data/fighting-buggy.json'
 import avanteBlackSpecialData from './data/avante-black-special.json'
+import hotshotIIData from './data/hotshot-ii.json'
 import ModelSelector from './components/ModelSelector'
 import PartsList from './components/PartsList'
 import HopUpList from './components/HopUpList'
@@ -75,6 +76,7 @@ const ALL_MODEL_DATA = {
   egress: egressData,
   'fighting-buggy': fightingBuggyData,
   'avante-black-special': avanteBlackSpecialData,
+  'hotshot-ii': hotshotIIData,
 }
 
 const SEARCH_INDEX = Object.entries(ALL_MODEL_DATA).flatMap(([modelId, data]) => [

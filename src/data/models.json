@@ -339,5 +339,15 @@
     "driveType": "4WD",
     "category": "Off-Road Buggy",
     "scale": "1/10"
+  },
+  {
+    "id": "hotshot-ii",
+    "name": "Hotshot II",
+    "itemNumbers": ["58062", "58710", "58737"],
+    "releaseYear": 1987,
+    "rereleaseYear": 2023,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
   }
 ]
