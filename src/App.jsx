@@ -37,6 +37,7 @@ import avanteBlackSpecialData from './data/avante-black-special.json'
 import hotshotIIData from './data/hotshot-ii.json'
 import hotshotIIBlockheadData from './data/hotshot-ii-blockhead.json'
 import wildWilly2Data from './data/wild-willy-2.json'
+import blackfoot2016Data from './data/blackfoot-2016.json'
 import ModelSelector from './components/ModelSelector'
 import PartsList from './components/PartsList'
 import HopUpList from './components/HopUpList'
@@ -81,6 +82,7 @@ const ALL_MODEL_DATA = {
   'hotshot-ii': hotshotIIData,
   'hotshot-ii-blockhead': hotshotIIBlockheadData,
   'wild-willy-2': wildWilly2Data,
+  'blackfoot-2016': blackfoot2016Data,
 }
 
 const SEARCH_INDEX = Object.entries(ALL_MODEL_DATA).flatMap(([modelId, data]) => [

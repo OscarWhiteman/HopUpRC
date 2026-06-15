@@ -369,5 +369,15 @@
     "driveType": "4WD",
     "category": "Off-Road Truck",
     "scale": "1/10"
+  },
+  {
+    "id": "blackfoot-2016",
+    "name": "Blackfoot (2016)",
+    "itemNumbers": ["58633"],
+    "releaseYear": 2016,
+    "rereleaseYear": null,
+    "driveType": "4WD",
+    "category": "Monster Truck",
+    "scale": "1/10"
   }
 ]
