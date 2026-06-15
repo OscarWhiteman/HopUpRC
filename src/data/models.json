@@ -291,6 +291,26 @@
     "scale": "1/10"
   },
   {
+    "id": "sand-rover",
+    "name": "Sand Rover",
+    "itemNumbers": ["58024", "58500"],
+    "releaseYear": 1981,
+    "rereleaseYear": 2011,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
+    "id": "xr311",
+    "name": "XR311 Combat Support Vehicle",
+    "itemNumbers": ["58004"],
+    "releaseYear": 1977,
+    "rereleaseYear": 2000,
+    "driveType": "4WD",
+    "category": "Military",
+    "scale": "1/10"
+  },
+  {
     "id": "egress",
     "name": "Egress",
     "itemNumbers": ["58079", "58583", "47489"],
@@ -306,6 +326,16 @@
     "itemNumbers": ["58034", "84389", "47304"],
     "releaseYear": 1982,
     "rereleaseYear": 2014,
+    "driveType": "4WD",
+    "category": "Off-Road Buggy",
+    "scale": "1/10"
+  },
+  {
+    "id": "avante-black-special",
+    "name": "Avante Black Special",
+    "itemNumbers": ["84270", "47390"],
+    "releaseYear": 2012,
+    "rereleaseYear": 2018,
     "driveType": "4WD",
     "category": "Off-Road Buggy",
     "scale": "1/10"

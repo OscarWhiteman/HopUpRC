@@ -29,8 +29,11 @@ import stadiumBlitzerData from './data/stadium-blitzer.json'
 import mantaRayData from './data/manta-ray.json'
 import thunderShotData from './data/thunder-shot.json'
 import topForceEvolutionData from './data/top-force-evolution.json'
+import sandRoverData from './data/sand-rover.json'
+import xr311Data from './data/xr311.json'
 import egressData from './data/egress.json'
 import fightingBuggyData from './data/fighting-buggy.json'
+import avanteBlackSpecialData from './data/avante-black-special.json'
 import ModelSelector from './components/ModelSelector'
 import PartsList from './components/PartsList'
 import HopUpList from './components/HopUpList'
@@ -67,8 +70,11 @@ const ALL_MODEL_DATA = {
   'manta-ray': mantaRayData,
   'thunder-shot': thunderShotData,
   'top-force-evolution': topForceEvolutionData,
+  'sand-rover': sandRoverData,
+  xr311: xr311Data,
   egress: egressData,
   'fighting-buggy': fightingBuggyData,
+  'avante-black-special': avanteBlackSpecialData,
 }
 
 const SEARCH_INDEX = Object.entries(ALL_MODEL_DATA).flatMap(([modelId, data]) => [
