@@ -78,18 +78,18 @@ export default function PartsList({ parts, crossRef, currentModelName }) {
             )
             return (
               <tr key={part.partNumber}>
-                <td className="part-number">{part.partNumber}</td>
-                <td className="bag-code">{part.bagCode ?? '—'}</td>
-                <td className="part-name">{part.name}</td>
-                <td>{part.description}</td>
-                <td className="col-qty">{part.qty ?? '—'}</td>
-                <td>
+                <td className="part-number" data-label="">{part.partNumber}</td>
+                <td className="bag-code" data-label="Bag">{part.bagCode ?? '—'}</td>
+                <td className="part-name" data-label="">{part.name}</td>
+                <td data-label="Desc.">{part.description || null}</td>
+                <td className="col-qty" data-label="Qty">{part.qty ?? '—'}</td>
+                <td data-label="Category">
                   <span className="category-tag">{part.category}</span>
                 </td>
-                {hasNotes && <td className="notes-cell">{part.notes ?? '—'}</td>}
+                {hasNotes && <td className="notes-cell" data-label="Notes">{part.notes || null}</td>}
                 {hasAlsoIn && (
-                  <td className="also-in-cell">
-                    {alsoIn.length > 0 ? alsoIn.join(', ') : '—'}
+                  <td className="also-in-cell" data-label="Also In">
+                    {alsoIn.length > 0 ? alsoIn.join(', ') : null}
                   </td>
                 )}
               </tr>

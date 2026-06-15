@@ -828,10 +828,84 @@ html, body {
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
-  .header-inner { flex-wrap: wrap; gap: 0.5rem; }
+  /* Header */
+  .site-tagline { display: none; }
+
+  /* Layout */
+  .main-content { padding: 1.25rem 1rem 3rem; }
+
+  /* Search hero */
+  .search-hero-inner { padding: 1.75rem 0 1.25rem; }
+  .search-hero-title { font-size: 1.5rem; }
+
+  /* Model cards → 2-column grid */
+  .model-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+  .model-card { min-width: unset; padding: 0.85rem 1rem; }
+  .card-name { font-size: 1rem; }
+
+  /* Parts table → stacked cards */
+  .parts-table-wrap {
+    border: none;
+    border-radius: 0;
+    overflow-x: visible;
+  }
+
+  .parts-table,
+  .parts-table tbody,
+  .parts-table tr { display: block; }
+
+  .parts-table thead { display: none; }
+
+  .parts-table tbody tr {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 0.75rem;
+    padding: 0.75rem;
+  }
+
+  .parts-table tbody tr:nth-child(even) td,
+  .parts-table tbody tr:hover td { background: none; }
+
+  .parts-table td {
+    align-items: baseline;
+    border: none;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.2rem 0;
+    vertical-align: unset;
+  }
+
+  .parts-table td:empty { display: none; }
+
+  .parts-table td::before {
+    color: var(--text-dim);
+    content: attr(data-label);
+    flex-shrink: 0;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    min-width: 4.5rem;
+    text-transform: uppercase;
+  }
+
+  .parts-table td[data-label=""]::before { display: none; }
+
+  .parts-table td.part-name,
+  .parts-table td.bag-code,
+  .parts-table td.also-in-cell { white-space: normal; }
+
+  .parts-table td.col-qty { text-align: left; width: auto; }
+
+  /* Hop-up grid */
   .hopup-grid { grid-template-columns: 1fr; }
-  .model-cards { flex-direction: column; }
-  .model-card { min-width: unset; }
-  .global-result { flex-wrap: wrap; }
+
+  /* Shopping list */
   .shopping-list-item { flex-wrap: wrap; }
+  .sl-part-name { flex-basis: 100%; }
+  .sl-actions { width: 100%; }
 }
