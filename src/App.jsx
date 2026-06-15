@@ -39,6 +39,7 @@ import hotshotIIBlockheadData from './data/hotshot-ii-blockhead.json'
 import wildWilly2Data from './data/wild-willy-2.json'
 import blackfoot2016Data from './data/blackfoot-2016.json'
 import superClodBusterData from './data/super-clod-buster.json'
+import subaruBratData from './data/subaru-brat.json'
 import ModelSelector from './components/ModelSelector'
 import PartsList from './components/PartsList'
 import HopUpList from './components/HopUpList'
@@ -85,6 +86,7 @@ const ALL_MODEL_DATA = {
   'wild-willy-2': wildWilly2Data,
   'blackfoot-2016': blackfoot2016Data,
   'super-clod-buster': superClodBusterData,
+  'subaru-brat': subaruBratData,
 }
 
 const SEARCH_INDEX = Object.entries(ALL_MODEL_DATA).flatMap(([modelId, data]) => [

@@ -389,5 +389,15 @@
     "driveType": "4WD",
     "category": "Monster Truck",
     "scale": "1/10"
+  },
+  {
+    "id": "subaru-brat",
+    "name": "Subaru Brat",
+    "itemNumbers": ["58038", "58384"],
+    "releaseYear": 1983,
+    "rereleaseYear": 2007,
+    "driveType": "4WD",
+    "category": "Off-Road Truck",
+    "scale": "1/10"
   }
 ]
