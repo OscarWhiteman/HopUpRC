@@ -1,16 +1,41 @@
+import { ExternalLink } from 'lucide-react'
+
+function BuyLinks({ partNumber }) {
+  const ebayUrl = `https://www.ebay.co.uk/sch/i.html?_nkw=tamiya+${encodeURIComponent(partNumber)}`
+  return (
+    <div className="sl-buy-links">
+      <a
+        href={ebayUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="sl-buy-link"
+        title="Search eBay UK"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <ExternalLink size={12} />
+        <span>eBay</span>
+      </a>
+    </div>
+  )
+}
+
 export default function ShoppingList({ hopUpList, allModelData, onToggleStatus, onSelectModel }) {
   const entries = Object.entries(hopUpList)
 
   if (entries.length === 0) {
     return (
       <div className="shopping-list-empty">
-        <p>Your list is empty. Browse hop-ups and mark items as wanted or owned.</p>
+        <p className="sl-empty-heading">No parts saved yet</p>
+        <p className="sl-empty-sub">Browse a model to start building your list.</p>
       </div>
     )
   }
 
   const grouped = {}
   let orphanCount = 0
+  let totalWanted = 0
+  let totalOwned = 0
+
   for (const [key, status] of entries) {
     const sep = key.indexOf('|')
     const modelId = key.slice(0, sep)
@@ -19,11 +44,23 @@ export default function ShoppingList({ hopUpList, allModelData, onToggleStatus, 
     if (!part) { orphanCount++; continue }
     if (!grouped[modelId]) grouped[modelId] = []
     grouped[modelId].push({ ...part, status, key })
+    if (status === 'wanted') totalWanted++
+    else if (status === 'owned') totalOwned++
   }
+
+  const modelCount = Object.keys(grouped).length
 
   return (
     <div className="shopping-list">
-      <h2 className="shopping-list-title">My List</h2>
+      <div className="sl-header">
+        <h2 className="shopping-list-title">My List</h2>
+        <div className="sl-stats">
+          <span className="sl-stat sl-stat-wanted">{totalWanted} wanted</span>
+          <span className="sl-stat sl-stat-owned">{totalOwned} owned</span>
+          <span className="sl-stat sl-stat-models">{modelCount} {modelCount === 1 ? 'model' : 'models'}</span>
+        </div>
+      </div>
+
       {Object.entries(grouped).map(([modelId, parts]) => {
         const modelName = allModelData[modelId]?.name || modelId
         const wanted = parts.filter((p) => p.status === 'wanted')
@@ -41,6 +78,7 @@ export default function ShoppingList({ hopUpList, allModelData, onToggleStatus, 
                   <div key={p.key} className="shopping-list-item">
                     <span className="sl-part-number">{p.partNumber}</span>
                     <span className="sl-part-name">{p.name}</span>
+                    <BuyLinks partNumber={p.partNumber} />
                     <div className="sl-actions">
                       <button
                         className="sl-btn sl-btn-owned"
@@ -65,8 +103,10 @@ export default function ShoppingList({ hopUpList, allModelData, onToggleStatus, 
                 <p className="shopping-list-section-label">Owned</p>
                 {owned.map((p) => (
                   <div key={p.key} className="shopping-list-item owned">
+                    <span className="sl-owned-check">✓</span>
                     <span className="sl-part-number">{p.partNumber}</span>
                     <span className="sl-part-name">{p.name}</span>
+                    <BuyLinks partNumber={p.partNumber} />
                     <div className="sl-actions">
                       <button
                         className="sl-btn sl-btn-remove"
