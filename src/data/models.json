@@ -51,16 +51,6 @@
     "scale": "1/10"
   },
   {
-    "id": "blackfoot",
-    "name": "Blackfoot",
-    "itemNumbers": ["58058"],
-    "releaseYear": 1986,
-    "rereleaseYear": null,
-    "driveType": "4WD",
-    "category": "Monster Truck",
-    "scale": "1/10"
-  },
-  {
     "id": "frog",
     "name": "Frog",
     "itemNumbers": ["58059"],

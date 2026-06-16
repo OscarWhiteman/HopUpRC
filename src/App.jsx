@@ -5,7 +5,6 @@ import lunchboxData from './data/lunchbox.json'
 import grasshopperData from './data/grasshopper.json'
 import hotshotData from './data/hotshot.json'
 import monsterBeetleData from './data/monster-beetle.json'
-import blackfootData from './data/blackfoot.json'
 import frogData from './data/frog.json'
 import wildOneData from './data/wild-one.json'
 import boomerangData from './data/boomerang.json'
@@ -53,7 +52,6 @@ const ALL_MODEL_DATA = {
   grasshopper: grasshopperData,
   hotshot: hotshotData,
   'monster-beetle': monsterBeetleData,
-  blackfoot: blackfootData,
   frog: frogData,
   'wild-one': wildOneData,
   boomerang: boomerangData,
