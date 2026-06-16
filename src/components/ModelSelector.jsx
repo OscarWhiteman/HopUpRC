@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Card } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 
@@ -12,6 +12,36 @@ const FILTERS = [
 
 export default function ModelSelector({ models, selectedModelId, onSelect }) {
   const [activeFilter, setActiveFilter] = useState('All')
+  const [tappedId, setTappedId] = useState(null)
+  const isTouchNav = useRef(false)
+  const tapTimer = useRef(null)
+
+  useEffect(() => () => { if (tapTimer.current) clearTimeout(tapTimer.current) }, [])
+
+  function handleTouchStart(modelId) {
+    setTappedId(modelId)
+    isTouchNav.current = false
+  }
+
+  function handleTouchMove() {
+    if (tapTimer.current) { clearTimeout(tapTimer.current); tapTimer.current = null }
+    isTouchNav.current = false
+    setTappedId(null)
+  }
+
+  function handleTouchEnd(modelId) {
+    isTouchNav.current = true
+    tapTimer.current = setTimeout(() => {
+      isTouchNav.current = false
+      setTappedId(null)
+      onSelect(modelId)
+    }, 300)
+  }
+
+  function handleClick(modelId) {
+    if (isTouchNav.current) return
+    onSelect(modelId)
+  }
 
   const filtered = activeFilter === 'All'
     ? models
@@ -43,8 +73,15 @@ export default function ModelSelector({ models, selectedModelId, onSelect }) {
           {filtered.map((model) => (
             <Card
               key={model.id}
-              className={cn('model-card', selectedModelId === model.id && 'selected')}
-              onClick={() => onSelect(model.id)}
+              className={cn(
+                'model-card',
+                selectedModelId === model.id && 'selected',
+                tappedId === model.id && 'tapped'
+              )}
+              onClick={() => handleClick(model.id)}
+              onTouchStart={() => handleTouchStart(model.id)}
+              onTouchMove={handleTouchMove}
+              onTouchEnd={() => handleTouchEnd(model.id)}
               role="button"
               tabIndex={0}
               onKeyDown={(e) => {
