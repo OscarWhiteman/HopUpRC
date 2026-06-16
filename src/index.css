@@ -127,13 +127,17 @@ html, body {
 .model-selector { margin-bottom: 2.5rem; }
 
 .selector-label {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.8rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--text-muted);
+  letter-spacing: 0.07em;
+  color: var(--text);
   margin-bottom: 1rem;
+  padding-left: 0.6rem;
+  border-left: 2px solid var(--accent);
 }
+
+.selector-filter-bar { margin-bottom: 1rem; }
 
 .model-cards {
   display: grid;
@@ -144,7 +148,7 @@ html, body {
 
 .model-card {
   /* shadcn Card overrides */
-  padding: 1.4rem 1.6rem;
+  padding: 0.9rem 1.1rem;
   border-radius: 10px;
   overflow: visible;
   gap: 0;
@@ -605,7 +609,7 @@ html, body {
 .search-hero { margin-bottom: 1rem; }
 
 .search-hero-inner {
-  padding: 4.5rem 0 2.5rem;
+  padding: 1.75rem 0 2rem;
   text-align: center;
 }
 
@@ -1019,7 +1023,7 @@ html, body {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
-  .model-card { padding: 1rem 1.1rem; }
+  .model-card { padding: 0.75rem 0.85rem; }
   .card-name { font-size: 0.9rem; }
 
   /* Parts table → stacked cards */
