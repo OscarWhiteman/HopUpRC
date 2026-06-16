@@ -12,8 +12,8 @@ function BuyLinks({ partNumber }) {
         title="Search eBay UK"
         onClick={(e) => e.stopPropagation()}
       >
-        <ExternalLink size={12} />
-        <span>eBay</span>
+        <ExternalLink size={13} />
+        <span>Search eBay</span>
       </a>
     </div>
   )
