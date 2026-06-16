@@ -154,6 +154,35 @@ html, body {
   color: var(--text-dim);
 }
 
+/* ── Model Selector filters ── */
+.model-filters {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.model-filters .filter-bar {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.filter-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border-accent);
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.model-count {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 /* ── Model Detail ── */
 .model-header {
   margin-bottom: 1.5rem;
