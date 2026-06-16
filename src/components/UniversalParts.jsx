@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import SearchInput from './SearchInput'
 
 function ModelsList({ models }) {
   const [open, setOpen] = useState(false)
@@ -120,12 +121,13 @@ export default function UniversalParts({ universalParts }) {
       </div>
 
       <div className="search-bar">
-        <input
+        <SearchInput
           className="search-input"
           type="search"
           placeholder="Search by part number or name…"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
+          onClear={() => setSearch('')}
         />
       </div>
 

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
+import SearchInput from './SearchInput'
 
 function highlight(text, query) {
   const str = String(text ?? '')
@@ -107,13 +108,14 @@ export default function GlobalSearch({ searchIndex, onSelectModel }) {
         <p className="search-hero-sub">
           Search across {searchIndex.length} parts — stock and hop-ups — from all models
         </p>
-        <input
+        <SearchInput
           ref={inputRef}
           className="search-hero-input"
           type="search"
           placeholder="Part number, name, or description…"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
+          onClear={() => setQuery('')}
           onKeyDown={handleKeyDown}
           aria-label="Search all parts"
         />

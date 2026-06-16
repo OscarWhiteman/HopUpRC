@@ -336,6 +336,38 @@ html, body {
   margin-bottom: 0.75rem;
 }
 
+/* Hide default browser clear button on all search inputs */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type="search"]::-ms-clear { display: none; }
+
+/* Custom clear button wrapper */
+.search-input-wrap {
+  display: block;
+  position: relative;
+}
+
+.search-bar .search-input-wrap { max-width: 480px; }
+
+.search-clear-btn {
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0 0.3rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: color 0.15s;
+}
+
+.search-clear-btn:hover { color: var(--accent); }
+
 .search-input {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -343,10 +375,9 @@ html, body {
   color: var(--text);
   font-size: 0.875rem;
   outline: none;
-  padding: 0.5rem 0.85rem;
+  padding: 0.5rem 2rem 0.5rem 0.85rem;
   transition: border-color 0.15s;
   width: 100%;
-  max-width: 480px;
 }
 
 .search-input::placeholder { color: var(--text-dim); }
@@ -703,6 +734,11 @@ html, body {
   margin-bottom: 2rem;
 }
 
+.search-hero .search-input-wrap {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
 .search-hero-input {
   background: #131313;
   border: 2px solid #333;
@@ -710,10 +746,8 @@ html, body {
   color: var(--text);
   display: block;
   font-size: 1.1rem;
-  margin: 0 auto;
-  max-width: 600px;
   outline: none;
-  padding: 0.95rem 1.4rem;
+  padding: 0.95rem 2.75rem 0.95rem 1.4rem;
   transition: border-color 0.15s, box-shadow 0.2s;
   width: 100%;
 }

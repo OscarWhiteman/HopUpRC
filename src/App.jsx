@@ -47,6 +47,7 @@ import HopUpList from './components/HopUpList'
 import GlobalSearch from './components/GlobalSearch'
 import ShoppingList from './components/ShoppingList'
 import UniversalParts from './components/UniversalParts'
+import SearchInput from './components/SearchInput'
 
 const ALL_MODEL_DATA = {
   hornet: hornetData,
@@ -347,12 +348,13 @@ export default function App() {
                 </div>
 
                 <div className="search-bar">
-                  <input
+                  <SearchInput
                     className="search-input"
                     type="search"
                     placeholder="Search by part number, name, or description…"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
+                    onClear={() => setSearchQuery('')}
                   />
                 </div>
 
