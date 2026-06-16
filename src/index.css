@@ -407,8 +407,8 @@ html, body {
 .parts-table td {
   border-bottom: 1px solid var(--border);
   color: var(--text);
-  padding: 0.65rem 0.9rem;
-  vertical-align: top;
+  padding: 0.38rem 0.75rem;
+  vertical-align: middle;
 }
 
 .parts-table tr:last-child td { border-bottom: none; }
@@ -442,6 +442,15 @@ html, body {
   color: var(--text-dim);
   font-family: 'SF Mono', 'Fira Code', monospace;
   font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.desc-cell {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 
@@ -772,11 +781,89 @@ html, body {
 .sort-active { color: var(--accent) !important; }
 
 /* ── Also In column ── */
-.also-in-cell {
+.also-in-cell { max-width: 200px; }
+
+.also-in-wrap {
+  position: relative;
+  font-size: 0.75rem;
   color: var(--text-dim);
-  font-size: 0.78rem;
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
+.also-in-names { color: var(--text-dim); }
+
+.also-in-more {
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-radius: 4px;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 1px 5px;
+  transition: border-color 0.12s, color 0.12s;
+  vertical-align: middle;
+}
+
+.also-in-more:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.also-in-popover {
+  background: #1e1e1e;
+  border: 1px solid var(--border-accent);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.55);
+  left: 0;
+  max-width: 260px;
+  min-width: 180px;
+  padding: 0.3rem 0;
+  position: absolute;
+  top: calc(100% + 4px);
+  z-index: 50;
+  white-space: normal;
+}
+
+.also-in-popover-item {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  padding: 0.28rem 0.75rem;
+  line-height: 1.4;
+}
+
+.also-in-popover-item:hover {
+  background: var(--bg-card-hover);
+  color: var(--text);
+}
+
+/* ── List button column ── */
+.col-list {
+  width: 2rem;
+  padding-left: 0.25rem;
+  padding-right: 0.5rem;
+}
+
+.part-list-btn {
+  align-items: center;
+  background: none;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-dim);
+  cursor: pointer;
+  display: flex;
+  padding: 3px;
+  transition: color 0.12s, background 0.12s;
+}
+
+.part-list-btn:hover {
+  color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.part-list-btn.active { color: var(--accent); }
 
 /* ── Hop-Up List Actions ── */
 .hopup-list-actions {
@@ -985,7 +1072,10 @@ html, body {
 
   .parts-table td.part-name,
   .parts-table td.bag-code,
-  .parts-table td.also-in-cell { white-space: normal; }
+  .parts-table td.also-in-cell,
+  .parts-table td.desc-cell { white-space: normal; overflow: visible; text-overflow: unset; }
+
+  .parts-table td.col-list { justify-content: flex-start; }
 
   .parts-table td.col-qty { text-align: left; width: auto; }
 

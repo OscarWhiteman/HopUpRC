@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
+import { Bookmark, BookmarkCheck } from 'lucide-react'
 
 const SORTERS = {
   partNumber: (a, b) => a.partNumber.localeCompare(b.partNumber),
@@ -8,7 +9,51 @@ const SORTERS = {
   category: (a, b) => a.category.localeCompare(b.category),
 }
 
-export default function PartsList({ parts, crossRef, currentModelName }) {
+function AlsoInCell({ alsoIn }) {
+  const [open, setOpen] = useState(false)
+  const ref = useRef(null)
+  const LIMIT = 3
+
+  useEffect(() => {
+    if (!open) return
+    function handleClick(e) {
+      if (ref.current && !ref.current.contains(e.target)) setOpen(false)
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [open])
+
+  if (alsoIn.length === 0) return null
+
+  const visible = alsoIn.slice(0, LIMIT)
+  const overflow = alsoIn.slice(LIMIT)
+
+  return (
+    <div className="also-in-wrap" ref={ref}>
+      <span className="also-in-names">{visible.join(', ')}</span>
+      {overflow.length > 0 && (
+        <>
+          {', '}
+          <button
+            className="also-in-more"
+            onClick={(e) => { e.stopPropagation(); setOpen((o) => !o) }}
+          >
+            +{overflow.length}
+          </button>
+          {open && (
+            <div className="also-in-popover">
+              {alsoIn.map((m) => (
+                <div key={m} className="also-in-popover-item">{m}</div>
+              ))}
+            </div>
+          )}
+        </>
+      )}
+    </div>
+  )
+}
+
+export default function PartsList({ parts, crossRef, currentModelName, modelId, hopUpList = {}, onToggleStatus }) {
   const [sortKey, setSortKey] = useState(null)
   const [sortDir, setSortDir] = useState('asc')
 
@@ -69,29 +114,51 @@ export default function PartsList({ parts, crossRef, currentModelName }) {
             </th>
             {hasNotes && <th>Notes</th>}
             {hasAlsoIn && <th>Also In</th>}
+            <th className="col-list" aria-label="Save to list" />
           </tr>
         </thead>
         <tbody>
-          {sorted.map((part, i) => {
+          {sorted.map((part) => {
             const alsoIn = (crossRef[part.partNumber] || []).filter(
               (m) => m !== currentModelName
             )
+            const listKey = `${modelId}|${part.partNumber}`
+            const inList = !!hopUpList[listKey]
             return (
               <tr key={part.partNumber}>
                 <td className="part-number" data-label="">{part.partNumber}</td>
                 <td className="bag-code" data-label="Bag">{part.bagCode ?? '—'}</td>
                 <td className="part-name" data-label="">{part.name}</td>
-                <td data-label="Desc.">{part.description || null}</td>
+                <td
+                  className="desc-cell"
+                  data-label="Desc."
+                  title={part.description || undefined}
+                >
+                  {part.description || null}
+                </td>
                 <td className="col-qty" data-label="Qty">{part.qty ?? '—'}</td>
                 <td data-label="Category">
                   <span className="category-tag">{part.category}</span>
                 </td>
-                {hasNotes && <td className="notes-cell" data-label="Notes">{part.notes || null}</td>}
+                {hasNotes && (
+                  <td className="notes-cell" data-label="Notes">{part.notes || null}</td>
+                )}
                 {hasAlsoIn && (
                   <td className="also-in-cell" data-label="Also In">
-                    {alsoIn.length > 0 ? alsoIn.join(', ') : null}
+                    <AlsoInCell alsoIn={alsoIn} />
                   </td>
                 )}
+                <td className="col-list" data-label="">
+                  {onToggleStatus && (
+                    <button
+                      className={`part-list-btn${inList ? ' active' : ''}`}
+                      title={inList ? 'Remove from list' : 'Add to list'}
+                      onClick={() => onToggleStatus(modelId, part.partNumber, 'wanted')}
+                    >
+                      {inList ? <BookmarkCheck size={14} /> : <Bookmark size={14} />}
+                    </button>
+                  )}
+                </td>
               </tr>
             )
           })}

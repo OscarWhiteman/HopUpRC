@@ -326,6 +326,9 @@ export default function App() {
                     parts={filteredParts}
                     crossRef={CROSS_REF}
                     currentModelName={modelDetail.name}
+                    modelId={selectedModelId}
+                    hopUpList={hopUpList}
+                    onToggleStatus={toggleHopUpStatus}
                   />
                 )}
                 {activeTab === TABS[1] && (
