@@ -1256,7 +1256,7 @@ html, body {
   .main-content { padding: 1.25rem 1rem 3rem; }
 
   /* Search hero */
-  .search-hero-inner { padding: 2rem 0 1.5rem; }
+  .search-hero-inner { padding: 0.75rem 0 1.5rem; }
   .search-hero-title { font-size: 1.75rem; }
 
   /* Model cards → 2-column grid */
@@ -1284,8 +1284,8 @@ html, body {
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: var(--radius);
-    margin-bottom: 0.75rem;
-    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    padding: 0.6rem 0.75rem;
   }
 
   .parts-table tbody tr:nth-child(even) td,
@@ -1296,7 +1296,7 @@ html, body {
     border: none;
     display: flex;
     gap: 0.5rem;
-    padding: 0.2rem 0;
+    padding: 0.1rem 0;
     vertical-align: unset;
   }
 
@@ -1306,19 +1306,26 @@ html, body {
     color: var(--text-dim);
     content: attr(data-label);
     flex-shrink: 0;
-    font-size: 0.68rem;
+    font-size: 0.65rem;
     font-weight: 600;
     letter-spacing: 0.04em;
-    min-width: 4.5rem;
+    min-width: 4rem;
     text-transform: uppercase;
   }
 
   .parts-table td[data-label=""]::before { display: none; }
 
-  .parts-table td.part-name,
-  .parts-table td.bag-code,
-  .parts-table td.also-in-cell,
-  .parts-table td.desc-cell { white-space: normal; overflow: visible; text-overflow: unset; }
+  /* Bag is low-value on mobile — hide it */
+  .parts-table td.bag-code { display: none; }
+
+  /* Part name may still wrap to a second line */
+  .parts-table td.part-name { white-space: normal; overflow: visible; text-overflow: unset; }
+
+  /* Desc: single truncated line — label left, content right */
+  .parts-table td.desc-cell { max-width: none; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+  /* Also-in: keep overflow visible so the popover isn't clipped */
+  .parts-table td.also-in-cell { max-width: none; overflow: visible; }
 
   .parts-table td.col-list { justify-content: flex-start; }
 
@@ -1328,14 +1335,37 @@ html, body {
   .up-models-col { width: auto; min-width: 0; }
   .up-models-wrap { flex-wrap: wrap; overflow: visible; white-space: normal; }
 
+  /* Parts table highlight — card glow replaces row strip on mobile */
+  @keyframes mobileCardFlash {
+    0%, 40% {
+      background-color: rgba(245, 197, 24, 0.1);
+      box-shadow: 0 0 0 2px rgba(245, 166, 35, 0.8);
+    }
+    100% {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  .parts-table tbody tr.row-highlight {
+    animation: mobileCardFlash 2.5s ease-out forwards;
+  }
+
+  .parts-table tbody tr.row-highlight td:first-child {
+    animation: none;
+  }
+
   /* Hop-up grid */
   .hopup-grid { grid-template-columns: 1fr; }
 
   /* Shopping list */
-  .shopping-list-item { flex-wrap: wrap; }
+  .shopping-list-item { flex-wrap: wrap; gap: 0.4rem; padding: 0.65rem 1.25rem; }
   .sl-part-name { flex-basis: 100%; }
+  /* Keep buy-links and actions at the same order so they share one row */
   .sl-buy-links { order: 3; }
-  .sl-actions { order: 4; width: 100%; }
+  .sl-actions { order: 3; width: auto; }
+  .sl-btn { font-size: 0.8rem; padding: 6px 12px; }
+  .sl-buy-link { font-size: 0.8rem; padding: 5px 12px; }
 
   /* Model detail badge row */
   .badge { font-size: 0.65rem; padding: 1px 6px; }
