@@ -266,8 +266,7 @@ export default function App() {
       <header className="site-header">
         <div className="header-inner">
           <button className="site-logo" onClick={handleHome} aria-label="Go to home">
-            <span className="logo-hop">Hop</span>
-            <span className="logo-up">Up</span>
+            <span className="logo-hopup">HopUp</span>
             <span className="logo-rc">RC</span>
           </button>
           <p className="site-tagline">Vintage Tamiya RC Parts Reference</p>
