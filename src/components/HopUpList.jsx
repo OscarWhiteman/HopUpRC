@@ -1,4 +1,19 @@
-export default function HopUpList({ hopUps, modelId, hopUpList, onToggleStatus }) {
+import { useState, useEffect, useRef } from 'react'
+
+export default function HopUpList({ hopUps, modelId, hopUpList, onToggleStatus, highlightPartNumber }) {
+  const [flashPart, setFlashPart] = useState(null)
+  const flashRef = useRef(null)
+
+  useEffect(() => {
+    if (!highlightPartNumber) return
+    setFlashPart(highlightPartNumber)
+    const scrollTimer = setTimeout(() => {
+      flashRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }, 120)
+    const clearTimer = setTimeout(() => setFlashPart(null), 2700)
+    return () => { clearTimeout(scrollTimer); clearTimeout(clearTimer) }
+  }, [highlightPartNumber])
+
   if (hopUps.length === 0) {
     return <p className="no-results">No hop-ups match this filter.</p>
   }
@@ -8,8 +23,13 @@ export default function HopUpList({ hopUps, modelId, hopUpList, onToggleStatus }
       {hopUps.map((item) => {
         const key = `${modelId}|${item.partNumber}`
         const status = hopUpList[key]
+        const isFlashing = item.partNumber === flashPart
         return (
-          <div key={item.partNumber} className="hopup-card">
+          <div
+            key={item.partNumber}
+            ref={isFlashing ? flashRef : null}
+            className={`hopup-card${isFlashing ? ' card-highlight' : ''}`}
+          >
             <div className="hopup-card-header">
               <span className="hopup-part-number">{item.partNumber}</span>
               <span className="category-tag">{item.category}</span>

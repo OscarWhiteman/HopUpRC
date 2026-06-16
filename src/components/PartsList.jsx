@@ -53,9 +53,31 @@ function AlsoInCell({ alsoIn }) {
   )
 }
 
-export default function PartsList({ parts, crossRef, currentModelName, modelId, hopUpList = {}, onToggleStatus }) {
+export default function PartsList({ parts, crossRef, currentModelName, modelId, highlightPartNumber }) {
   const [sortKey, setSortKey] = useState(null)
   const [sortDir, setSortDir] = useState('asc')
+  const [pinned, setPinned] = useState(new Set())
+
+  function togglePin(partNumber) {
+    setPinned((prev) => {
+      const next = new Set(prev)
+      if (next.has(partNumber)) next.delete(partNumber)
+      else next.add(partNumber)
+      return next
+    })
+  }
+  const [flashPart, setFlashPart] = useState(null)
+  const flashRef = useRef(null)
+
+  useEffect(() => {
+    if (!highlightPartNumber) return
+    setFlashPart(highlightPartNumber)
+    const scrollTimer = setTimeout(() => {
+      flashRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }, 120)
+    const clearTimer = setTimeout(() => setFlashPart(null), 2700)
+    return () => { clearTimeout(scrollTimer); clearTimeout(clearTimer) }
+  }, [highlightPartNumber])
 
   function handleSort(key) {
     if (sortKey === key) {
@@ -122,10 +144,14 @@ export default function PartsList({ parts, crossRef, currentModelName, modelId, 
             const alsoIn = (crossRef[part.partNumber] || []).filter(
               (m) => m !== currentModelName
             )
-            const listKey = `${modelId}|${part.partNumber}`
-            const inList = !!hopUpList[listKey]
+            const isPinned = pinned.has(part.partNumber)
+            const isFlashing = part.partNumber === flashPart
             return (
-              <tr key={part.partNumber}>
+              <tr
+                key={part.partNumber}
+                ref={isFlashing ? flashRef : null}
+                className={[isFlashing ? 'row-highlight' : '', isPinned ? 'row-pinned' : ''].filter(Boolean).join(' ') || undefined}
+              >
                 <td className="part-number" data-label="">{part.partNumber}</td>
                 <td className="bag-code" data-label="Bag">{part.bagCode ?? '—'}</td>
                 <td className="part-name" data-label="">{part.name}</td>
@@ -149,15 +175,13 @@ export default function PartsList({ parts, crossRef, currentModelName, modelId, 
                   </td>
                 )}
                 <td className="col-list" data-label="">
-                  {onToggleStatus && (
-                    <button
-                      className={`part-list-btn${inList ? ' active' : ''}`}
-                      title={inList ? 'Remove from list' : 'Add to list'}
-                      onClick={() => onToggleStatus(modelId, part.partNumber, 'wanted')}
-                    >
-                      {inList ? <BookmarkCheck size={14} /> : <Bookmark size={14} />}
-                    </button>
-                  )}
+                  <button
+                    className={`part-list-btn${isPinned ? ' active' : ''}`}
+                    title={isPinned ? 'Unpin row' : 'Pin row'}
+                    onClick={() => togglePin(part.partNumber)}
+                  >
+                    {isPinned ? <BookmarkCheck size={14} /> : <Bookmark size={14} />}
+                  </button>
                 </td>
               </tr>
             )

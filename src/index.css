@@ -383,6 +383,42 @@ html, body {
   font-weight: 700;
 }
 
+/* ── Search highlight animations ── */
+@keyframes rowFlash {
+  0%   { background-color: rgba(245, 197, 24, 0.14); }
+  100% { background-color: transparent; }
+}
+
+@keyframes rowLeftFlash {
+  0%, 55% { box-shadow: inset 3px 0 0 var(--accent); }
+  100%    { box-shadow: none; }
+}
+
+@keyframes cardFlash {
+  0%   { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(245, 197, 24, 0.25), 0 2px 8px rgba(0,0,0,0.3); }
+  100% { border-color: var(--border); box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+}
+
+.parts-table tbody tr.row-highlight {
+  animation: rowFlash 2.5s ease-out forwards;
+}
+
+.parts-table tbody tr.row-highlight td:first-child {
+  animation: rowLeftFlash 2.5s ease-out forwards;
+}
+
+.hopup-card.card-highlight {
+  animation: cardFlash 2.5s ease-out forwards;
+}
+
+.parts-table tbody tr.row-pinned td {
+  background-color: rgba(245, 197, 24, 0.05);
+}
+
+.parts-table tbody tr.row-pinned td:first-child {
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
 /* ── Parts Table ── */
 .parts-table-wrap {
   overflow-x: auto;
@@ -576,7 +612,28 @@ html, body {
 }
 
 /* ── Header Actions ── */
-.header-actions { margin-left: auto; }
+.header-nav {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.header-nav-link {
+  background: none;
+  border: none;
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  transition: color 0.15s;
+}
+
+.header-nav-link:hover { color: var(--text); }
+.header-nav-link.active { color: var(--accent); }
+
+.header-actions { display: flex; gap: 0.5rem; }
 
 .list-btn {
   align-items: center;
@@ -902,6 +959,41 @@ html, body {
   background: #1a2e1a;
   border-color: #4a8a4a;
   color: #6abf6a;
+}
+
+/* ── Universal Parts ── */
+.universal-parts { max-width: 960px; }
+
+.universal-parts-header { margin-bottom: 1.5rem; }
+
+.universal-parts-title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 0.35rem;
+}
+
+.universal-parts-sub {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.universal-parts-count {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.fits-badge {
+  background: #0f1e30;
+  border: 1px solid #1e4878;
+  border-radius: 999px;
+  color: #6a9fd4;
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  min-width: 2rem;
+  padding: 1px 8px;
+  text-align: center;
 }
 
 /* ── Shopping List ── */

@@ -45,6 +45,7 @@ import PartsList from './components/PartsList'
 import HopUpList from './components/HopUpList'
 import GlobalSearch from './components/GlobalSearch'
 import ShoppingList from './components/ShoppingList'
+import UniversalParts from './components/UniversalParts'
 
 const ALL_MODEL_DATA = {
   hornet: hornetData,
@@ -95,14 +96,29 @@ const SEARCH_INDEX = Object.entries(ALL_MODEL_DATA).flatMap(([modelId, data]) =>
 ])
 
 const CROSS_REF = {}
+const _PART_META = {}
 for (const data of Object.values(ALL_MODEL_DATA)) {
   for (const part of data.stockParts) {
-    if (!CROSS_REF[part.partNumber]) CROSS_REF[part.partNumber] = []
+    if (!CROSS_REF[part.partNumber]) {
+      CROSS_REF[part.partNumber] = []
+      _PART_META[part.partNumber] = { name: part.name, category: part.category }
+    }
     if (!CROSS_REF[part.partNumber].includes(data.name)) {
       CROSS_REF[part.partNumber].push(data.name)
     }
   }
 }
+
+const UNIVERSAL_PARTS = Object.entries(CROSS_REF)
+  .filter(([, models]) => models.length >= 3)
+  .map(([partNumber, models]) => ({
+    partNumber,
+    models,
+    name: _PART_META[partNumber].name,
+    category: _PART_META[partNumber].category,
+    count: models.length,
+  }))
+  .sort((a, b) => b.count - a.count)
 
 const TABS = ['Stock Parts', 'Hop-Up Options']
 
@@ -112,6 +128,8 @@ export default function App() {
   const [categoryFilter, setCategoryFilter] = useState('All')
   const [searchQuery, setSearchQuery] = useState('')
   const [showShoppingList, setShowShoppingList] = useState(false)
+  const [showUniversalParts, setShowUniversalParts] = useState(false)
+  const [highlightPart, setHighlightPart] = useState(null)
   const [hopUpList, setHopUpList] = useState(() => {
     try { return JSON.parse(localStorage.getItem('hopUpList') || '{}') }
     catch { return {} }
@@ -132,15 +150,22 @@ export default function App() {
       if (s.view === 'model') {
         setSelectedModelId(s.modelId)
         setShowShoppingList(false)
+        setShowUniversalParts(false)
         setCategoryFilter('All')
         setActiveTab(TABS[0])
         setSearchQuery('')
       } else if (s.view === 'shopping') {
         setShowShoppingList(true)
+        setShowUniversalParts(false)
+        setSelectedModelId(null)
+      } else if (s.view === 'universal') {
+        setShowUniversalParts(true)
+        setShowShoppingList(false)
         setSelectedModelId(null)
       } else {
         setSelectedModelId(null)
         setShowShoppingList(false)
+        setShowUniversalParts(false)
         setCategoryFilter('All')
         setActiveTab(TABS[0])
         setSearchQuery('')
@@ -150,13 +175,23 @@ export default function App() {
     return () => window.removeEventListener('popstate', onPopState)
   }, [])
 
-  function handleSelectModel(id) {
+  function handleUniversalParts() {
+    setShowUniversalParts(true)
     setShowShoppingList(false)
-    if (id === selectedModelId) return
+    setSelectedModelId(null)
+    history.pushState({ view: 'universal' }, '')
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }
+
+  function handleSelectModel(id, highlight = null) {
+    setShowShoppingList(false)
+    setShowUniversalParts(false)
+    if (id === selectedModelId && !highlight) return
     setCategoryFilter('All')
-    setActiveTab(TABS[0])
+    setActiveTab(highlight?.type === 'Hop-Up' ? TABS[1] : TABS[0])
     setSearchQuery('')
     setSelectedModelId(id)
+    setHighlightPart(highlight)
     history.pushState({ view: 'model', modelId: id }, '')
     window.scrollTo({ top: 0, behavior: 'instant' })
   }
@@ -164,6 +199,7 @@ export default function App() {
   function handleHome() {
     setSelectedModelId(null)
     setShowShoppingList(false)
+    setShowUniversalParts(false)
     setCategoryFilter('All')
     setActiveTab(TABS[0])
     setSearchQuery('')
@@ -222,6 +258,7 @@ export default function App() {
   function handleTabChange(tab) {
     setActiveTab(tab)
     setCategoryFilter('All')
+    setHighlightPart(null)
   }
 
   return (
@@ -234,12 +271,21 @@ export default function App() {
             <span className="logo-rc">RC</span>
           </button>
           <p className="site-tagline">Vintage Tamiya RC Parts Reference</p>
+          <nav className="header-nav">
+            <button
+              className={`header-nav-link${showUniversalParts ? ' active' : ''}`}
+              onClick={handleUniversalParts}
+            >
+              Universal Parts
+            </button>
+          </nav>
           <div className="header-actions">
             <button
               className={`list-btn${showShoppingList ? ' active' : ''}`}
               onClick={() => {
                 const next = !showShoppingList
                 setShowShoppingList(next)
+                setShowUniversalParts(false)
                 setSelectedModelId(null)
                 history.pushState(next ? { view: 'shopping' } : { view: 'home' }, '')
               }}
@@ -252,7 +298,9 @@ export default function App() {
       </header>
 
       <main className="main-content">
-        {showShoppingList ? (
+        {showUniversalParts ? (
+          <UniversalParts universalParts={UNIVERSAL_PARTS} />
+        ) : showShoppingList ? (
           <>
             <ShoppingList
               hopUpList={hopUpList}
@@ -325,8 +373,7 @@ export default function App() {
                     crossRef={CROSS_REF}
                     currentModelName={modelDetail.name}
                     modelId={selectedModelId}
-                    hopUpList={hopUpList}
-                    onToggleStatus={toggleHopUpStatus}
+                    highlightPartNumber={highlightPart?.type !== 'Hop-Up' ? highlightPart?.partNumber : null}
                   />
                 )}
                 {activeTab === TABS[1] && (
@@ -335,6 +382,7 @@ export default function App() {
                     modelId={selectedModelId}
                     hopUpList={hopUpList}
                     onToggleStatus={toggleHopUpStatus}
+                    highlightPartNumber={highlightPart?.type === 'Hop-Up' ? highlightPart?.partNumber : null}
                   />
                 )}
             </section>

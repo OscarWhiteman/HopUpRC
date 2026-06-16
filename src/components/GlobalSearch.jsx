@@ -90,7 +90,7 @@ export default function GlobalSearch({ searchIndex, onSelectModel }) {
     } else if (e.key === 'Enter') {
       e.preventDefault()
       const target = focusedIndex >= 0 ? flatResults[focusedIndex] : flatResults[0]
-      if (target) onSelectModel(target.modelId)
+      if (target) onSelectModel(target.modelId, { partNumber: target.partNumber, type: target.type })
     } else if (e.key === 'Escape') {
       setQuery('')
     }
@@ -147,7 +147,7 @@ export default function GlobalSearch({ searchIndex, onSelectModel }) {
                     key={`${r.modelId}-${r.partNumber}-${r.type}`}
                     ref={(el) => { resultRefs.current[idx] = el }}
                     className={`global-result${isFocused ? ' focused' : ''}`}
-                    onClick={() => onSelectModel(r.modelId)}
+                    onClick={() => onSelectModel(r.modelId, { partNumber: r.partNumber, type: r.type })}
                     onMouseEnter={() => setFocusedIndex(idx)}
                   >
                     <div className="global-result-top">
