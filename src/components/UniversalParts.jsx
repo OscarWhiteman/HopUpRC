@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from 'react'
 function ModelsList({ models }) {
   const [open, setOpen] = useState(false)
   const ref = useRef(null)
-  const LIMIT = 3
+  const LIMIT = 2
 
   useEffect(() => {
     if (!open) return
@@ -18,11 +18,12 @@ function ModelsList({ models }) {
   const overflow = models.slice(LIMIT)
 
   return (
-    <div className="also-in-wrap" ref={ref}>
-      <span className="also-in-names">{visible.join(', ')}</span>
+    <div className="up-models-wrap" ref={ref}>
+      <span className="also-in-names">
+        {visible.join(', ')}{overflow.length > 0 ? ',' : ''}
+      </span>
       {overflow.length > 0 && (
         <>
-          {', '}
           <button
             className="also-in-more"
             onClick={(e) => { e.stopPropagation(); setOpen((o) => !o) }}
@@ -49,7 +50,7 @@ const MIN_OPTIONS = [
 ]
 
 const SORTERS = {
-  count:      (a, b) => b.count - a.count,
+  count:      (a, b) => a.count - b.count,
   partNumber: (a, b) => a.partNumber.localeCompare(b.partNumber),
   name:       (a, b) => a.name.localeCompare(b.name),
   category:   (a, b) => a.category.localeCompare(b.category),
@@ -164,7 +165,7 @@ export default function UniversalParts({ universalParts }) {
                 <th className={thClass('count')} onClick={() => handleSort('count')}>
                   Fits{si('count')}
                 </th>
-                <th>Models</th>
+                <th className="up-models-col">Models</th>
               </tr>
             </thead>
             <tbody>
@@ -178,7 +179,7 @@ export default function UniversalParts({ universalParts }) {
                   <td data-label="Fits">
                     <span className="fits-badge">{p.count}</span>
                   </td>
-                  <td className="also-in-cell" data-label="Models">
+                  <td className="also-in-cell up-models-col" data-label="Models">
                     <ModelsList models={p.models} />
                   </td>
                 </tr>
