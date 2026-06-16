@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { LayoutGrid } from 'lucide-react'
 import models from './data/models.json'
 import hornetData from './data/hornet.json'
 import lunchboxData from './data/lunchbox.json'
@@ -274,8 +275,10 @@ export default function App() {
             <button
               className={`header-nav-link${showUniversalParts ? ' active' : ''}`}
               onClick={handleUniversalParts}
+              aria-label="Universal Parts"
             >
-              Universal Parts
+              <span className="nav-link-text">Universal Parts</span>
+              <LayoutGrid size={15} className="nav-link-icon" aria-hidden="true" />
             </button>
           </nav>
           <div className="header-actions">
