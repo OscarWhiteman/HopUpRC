@@ -1404,6 +1404,14 @@ input[type="search"]::-ms-clear { display: none; }
   /* Pinned row: suppress left bar — desktop-only style */
   .parts-table tbody tr.row-pinned td:first-child { box-shadow: none; }
 
+  /* Pinned card: clear per-td backgrounds (fixes even/odd alternating bug),
+     replace with a full card border glow on the tr instead */
+  .parts-table tbody tr.row-pinned td { background-color: transparent; }
+  .parts-table tbody tr.row-pinned {
+    border-color: rgba(245, 166, 35, 0.4);
+    box-shadow: 0 0 12px rgba(245, 166, 35, 0.1);
+  }
+
   /* Bookmark button: no tap highlight on the containing cell */
   .parts-table td.col-list { -webkit-tap-highlight-color: transparent; }
 
