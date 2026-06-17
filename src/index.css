@@ -1332,6 +1332,7 @@ input[type="search"]::-ms-clear { display: none; }
   }
   .model-card { padding: 0.75rem 0.85rem; }
   .card-name { font-size: 0.9rem; }
+  .card-items { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
   /* Parts table → stacked cards */
   .parts-table-wrap {
