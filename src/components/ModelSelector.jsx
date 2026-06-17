@@ -13,23 +13,35 @@ const FILTERS = [
 export default function ModelSelector({ models, selectedModelId, onSelect }) {
   const [activeFilter, setActiveFilter] = useState('All')
   const [tappedId, setTappedId] = useState(null)
+  const touchStart = useRef(null)  // { x, y, time } — null means cancelled
   const isTouchNav = useRef(false)
   const tapTimer = useRef(null)
 
   useEffect(() => () => { if (tapTimer.current) clearTimeout(tapTimer.current) }, [])
 
-  function handleTouchStart(modelId) {
-    setTappedId(modelId)
-    isTouchNav.current = false
+  function handleTouchStart(e) {
+    const t = e.touches[0]
+    touchStart.current = { x: t.clientX, y: t.clientY, time: Date.now() }
+    // No glow or navigation here — wait for touchend confirmation
   }
 
-  function handleTouchMove() {
-    if (tapTimer.current) { clearTimeout(tapTimer.current); tapTimer.current = null }
-    isTouchNav.current = false
-    setTappedId(null)
+  function handleTouchMove(e) {
+    if (!touchStart.current) return
+    const t = e.touches[0]
+    const moved =
+      Math.abs(t.clientX - touchStart.current.x) > 10 ||
+      Math.abs(t.clientY - touchStart.current.y) > 10
+    if (moved) touchStart.current = null  // cancel — user is scrolling
   }
 
   function handleTouchEnd(modelId) {
+    if (!touchStart.current) return  // cancelled by scroll
+    const duration = Date.now() - touchStart.current.time
+    touchStart.current = null
+    if (duration >= 500) return  // long press — ignore
+
+    // Confirmed tap: show glow then navigate
+    setTappedId(modelId)
     isTouchNav.current = true
     tapTimer.current = setTimeout(() => {
       isTouchNav.current = false
@@ -79,8 +91,8 @@ export default function ModelSelector({ models, selectedModelId, onSelect }) {
                 tappedId === model.id && 'tapped'
               )}
               onClick={() => handleClick(model.id)}
-              onTouchStart={() => handleTouchStart(model.id)}
-              onTouchMove={handleTouchMove}
+              onTouchStart={(e) => handleTouchStart(e)}
+              onTouchMove={(e) => handleTouchMove(e)}
               onTouchEnd={() => handleTouchEnd(model.id)}
               role="button"
               tabIndex={0}
