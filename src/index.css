@@ -981,7 +981,9 @@ input[type="search"]::-ms-clear { display: none; }
   cursor: pointer;
   display: flex;
   padding: 3px;
+  touch-action: manipulation;
   transition: color 0.12s, background 0.12s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .part-list-btn:hover {
@@ -990,6 +992,15 @@ input[type="search"]::-ms-clear { display: none; }
 }
 
 .part-list-btn.active { color: var(--accent); }
+
+/* Touch devices: no background bar on tap — icon colour only */
+@media (hover: none) {
+  .part-list-btn:hover { background: none; color: var(--text-dim); }
+  .part-list-btn:active { background: none; color: var(--accent); }
+  .part-list-btn.active,
+  .part-list-btn.active:hover,
+  .part-list-btn.active:active { color: var(--accent); }
+}
 
 /* ── Hop-Up List Actions ── */
 .hopup-list-actions {
