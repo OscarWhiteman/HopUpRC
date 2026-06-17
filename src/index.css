@@ -1401,6 +1401,12 @@ input[type="search"]::-ms-clear { display: none; }
   .up-models-col { width: auto; min-width: 0; }
   .up-models-wrap { flex-wrap: wrap; overflow: visible; white-space: normal; }
 
+  /* Pinned row: suppress left bar — desktop-only style */
+  .parts-table tbody tr.row-pinned td:first-child { box-shadow: none; }
+
+  /* Bookmark button: no tap highlight on the containing cell */
+  .parts-table td.col-list { -webkit-tap-highlight-color: transparent; }
+
   /* Parts table highlight — card glow replaces row strip on mobile */
   @keyframes mobileCardFlash {
     0%, 40% {
