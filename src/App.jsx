@@ -124,6 +124,20 @@ const UNIVERSAL_PARTS = Object.entries(CROSS_REF)
 
 const TABS = ['Stock Parts', 'Hop-Up Options']
 
+function ModelDescription({ text }) {
+  const [expanded, setExpanded] = useState(false)
+  return (
+    <div className="model-desc-wrap">
+      <p className={`model-description${expanded ? '' : ' model-description--clamped'}`}>
+        {text}
+      </p>
+      <button className="model-desc-toggle" onClick={() => setExpanded((e) => !e)}>
+        {expanded ? 'Read less' : 'Read more'}
+      </button>
+    </div>
+  )
+}
+
 export default function App() {
   const [selectedModelId, setSelectedModelId] = useState(null)
   const [activeTab, setActiveTab] = useState(TABS[0])
@@ -326,7 +340,7 @@ export default function App() {
                         Item {modelDetail.itemNumbers.join(' / ')}
                       </span>
                     </div>
-                    <p className="model-description">{modelDetail.description}</p>
+                    <ModelDescription key={selectedModelId} text={modelDetail.description} />
                   </div>
                 </div>
 
