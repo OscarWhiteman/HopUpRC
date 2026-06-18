@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Analytics } from '@vercel/analytics/react'
 import { LayoutGrid } from 'lucide-react'
 import models from './data/models.json'
 import hornetData from './data/hornet.json'
@@ -424,6 +425,7 @@ export default function App() {
       <footer className="site-footer">
         <p>HopUpRC — Community reference tool. Not affiliated with Tamiya Co., Ltd.</p>
       </footer>
+      <Analytics />
     </div>
   )
 }
